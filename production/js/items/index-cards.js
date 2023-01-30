@@ -1,4 +1,4 @@
-const housewareURL = 'http://acnhapi.com/v1a/houseware/';
+const housewareURL = 'https://acnhapi.com/v1a/houseware/';
 let container = document.querySelector('.item-cards');
 let purchaseButtons = [];
 fetch(housewareURL)
