@@ -115,6 +115,29 @@ button {
 	border-radius: 9px;
 	padding: 2vmin;
 }
+.text-lg{
+	font-size: 2.5em;
+}
+input{
+	background-color: transparent;
+	padding: 0;
+}
+/* input styles */
+.input-text{
+	padding: 0;
+}
+.input-text-sm {
+	height: 2rem;
+	width: 5rem;
+}
+.input-text-md{
+	width: 20rem;
+	height: 2rem;
+}
+.input-text-lg{
+	width: 100%;
+}
+
 .container {
 	display: flex;
 	flex-direction: column;
@@ -259,21 +282,38 @@ button {
 	text-decoration: underline;
 }
 /* basic card design */
+.item-cards-container{
+	display: flex;
+	flex-direction: column;
+	gap: 3vmin;
+	border-bottom: 1px solid var(--accent-grey-opacity);
+	padding-bottom: 5vmin;
+}
 .item-cards{
 	display: grid;
-	grid-template-columns: repeat(10, 15rem);
+	grid-template-columns: repeat(10, 13rem);
 	overflow: scroll;
-
+	gap: 5vmin;
+	width: 95vw;
+	margin: 5vmin auto;
+}
+.purchase-item-card-container{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	cursor: pointer;
 }
 .item-card {
 	background-color: var(--secondary-bg);
 	border-radius: 10px;
-	padding: 3vmin 2vmin;
+	padding: 2vmin;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
 	color: var(--main-text);
+	height: 16rem;
 }
 .item-card > a {
 	display: flex;
@@ -282,6 +322,7 @@ button {
 	text-decoration: none;
 	padding-bottom: 1vmin;
 	width: 10rem;
+	color: var(--main-text);
 }
 .item-card button {
 	padding: 1vmin; 
@@ -307,28 +348,23 @@ button {
 	display: flex;
 	align-items: center;
 }
-/* .purchase-info-container button {
-	border: none;
-	background-color: transparent;
-	padding: 1vmin;
-	border-radius: 50vw;
-	aspect-ratio: 1/1;
-	color: var(--text-dark);
-	transition: all 0.3s ease-in-out;
-	position: absolute;
-	margin: 0 1vmin;
-	cursor: pointer;
-	left: 0;
-}
-.purchase-info-container button:hover {
-	background-color: var(--accent-grey-opacity);
-	transform: translateX(1px);
-} */
 .purchase-info-container p {
 	color: var(--main-text);
 }
-
-
+/* positing item form styles */
+.post-item{
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	width: 75vw;
+	margin: 0 auto;
+}
+@media screen and (min-width:750px){
+	.item-cards{
+		width: 75vw;
+		margin: 0 auto;
+	}
+}
 /* media query for desktop screens */
 @media screen and (min-width: 1000px) {
 	.nav-spacer {
@@ -337,4 +373,5 @@ button {
 	.caro-content-text-container {
 		font-size: 1em;
 	}
+	
 }

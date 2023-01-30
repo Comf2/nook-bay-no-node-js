@@ -162,6 +162,13 @@ body {
 #search-icon:hover {
 	background-color: rgba(0, 0, 0, 0.15);
 }
+
+/* Media Query for tablet */
+@media screen and (min-width:750px){
+	.mobile-search-container{
+		width: 100%;
+	}
+}
 /* media query for desktop screens */
 @media screen and (min-width: 1000px) {
 	.toggle-nav-button {
@@ -280,4 +287,15 @@ body {
 	.mobile-dropdown-content * {
 		display: none;
 	}
+	.nav-list li:is(.desktop-search-container) {
+		display: flex;
+	}
+	
+.desktop-search-container * {
+	display: flex;
+}
+.desktop-search-container i {
+	width: auto;
+	height: auto;
+}
 }

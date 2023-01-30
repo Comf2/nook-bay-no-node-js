@@ -19,7 +19,6 @@ body {
 	padding: 0;
 	margin: 0;
 	width: 100%;
-	background-color: red;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	place-items: center;
