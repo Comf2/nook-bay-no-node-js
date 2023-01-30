@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="IE=edge"
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<link
+			rel="stylesheet"
+			href="../../styles/reset.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="../../styles/main.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="../../styles/navbar.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="../../styles/item.css"
+		/>
+		<script
+			src="../../js/main.js"
+			defer
+		></script>
+		<script
+			src="https://kit.fontawesome.com/c503d7f164.js"
+			crossorigin="anonymous"
+		></script>
+		<title>Document</title>
+	</head>
+	<body>
+		<nav class="nav-bar">
+			<div class="nav-top-container">
+				<!-- hamburger icon -->
+				<button
+					class="toggle-nav-button button-reset"
+					aria-controls="primary-navigation"
+					aria-expanded="false"
+				>
+					<svg
+						stroke="var(--button-color)"
+						fill="none"
+						class="hamburger"
+						viewBox="-10 -10 120 120"
+						width="60"
+					>
+						<path
+							class="line"
+							stroke-width="8"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="m 20 40 h 60 a 1 1 0 0 1 0 20 h -60 a 1 1 0 0 1 0 -40 h 30 v 70"
+						></path>
+					</svg>
+				</button>
+				<div class="mobile-search-container">
+					<div class="search-container">
+						<i
+							class="fa-solid fa-magnifying-glass"
+							id="search-icon"
+						></i>
+						<input
+							type="search"
+							name="search-item"
+							id="search-item"
+							class="main-search"
+							placeholder="Item..."
+						/>
+					</div>
+				</div>
+			</div>
+			<ul class="nav-list">
+				<li>
+					<a href="../../../index.html">
+						<img
+							src="../../assets/svg/NookBay.svg"
+							alt="Nook Bay"
+							aria-hidden="true"
+							class="main-logo"
+						/>
+					</a>
+				</li>
+				<li>
+					<i class="fa-solid fa-bag-shopping"></i>
+					<p>Pocket</p>
+				</li>
+				<li>
+					<i class="fa-solid fa-list"></i>
+					<p>Requests</p>
+				</li>
+				<li>
+					<i class="fa-solid fa-plus"></i>
+					<p>Create</p>
+				</li>
+				<li class="desktop-search-container">
+					<div class="search-container">
+						<i
+							class="fa-solid fa-magnifying-glass"
+							id="search-icon"
+						></i>
+						<input
+							type="search"
+							name="search-item"
+							id="search-item"
+							class="main-search"
+							placeholder="Item..."
+						/>
+					</div>
+				</li>
+				<li
+					onclick="window.location='./production/assets/pages/log-in.html'"
+					class="mobile-dropdown-content"
+				>
+					<i class="fa-solid fa-right-to-bracket"></i>
+					<p>Login</p>
+				</li>
+				<li
+					onclick="window.location='./production/assets/pages/sign-up.html'"
+					class="mobile-dropdown-content"
+				>
+					<i class="fa-solid fa-check"></i>
+					<p>Sign Up</p>
+				</li>
+				<li class="toggle-light-mode mobile-dropdown-content">
+					<i class="fa-solid fa-sun"></i>
+					<p>Dark Mode</p>
+				</li>
+				<li class="account-container">
+					<i
+						id="account-icon"
+						class="fa-solid fa-user"
+					></i>
+					<div
+						data-open="false"
+						style="display: none"
+						class="account-dropdown"
+					>
+						<ul>
+							<li
+								onclick="window.location='./production/assets/pages/log-in.html'"
+							>
+								<i class="fa-solid fa-right-to-bracket"></i>
+								<p>Login</p>
+							</li>
+							<li
+								onclick="window.location='./production/assets/pages/sign-up.html'"
+							>
+								<i class="fa-solid fa-check"></i>
+								<p>Sign Up</p>
+							</li>
+							<li class="toggle-light-mode">
+								<i class="fa-solid fa-sun"></i>
+								<p>Dark Mode</p>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</nav>
+		<div class="container">
+				<div class="nav-spacer"></div>
+				<header class="item-container">
+					<img
+						src="../images/arch-placeholder.png"
+						alt="2021 Celebratory Arch"
+						aria-hidden="true"
+						class="item-image"
+					/>
+                    <section class="desktop-item-info-container">
+                        <div class="desktop-top-info">
+                            <h2 class="text-blue">Comf1</h2>
+                            <h1 class="text-blue"> 2021 Celebratory Arch</h1>
+                        </div>
+                        <div class="desktop-head-info">
+                            <div class="desktop-head-main-info">
+                                <h2 class="text-green">500</h2>
+                                <p class="minor-text">Attribute: none</p>
+                                <h3 class="text-blue">Description From Poster</h2>
+                                <div class="main-border item-desc">
+                                    <p>I am willing to have you pick up item any time after 2PM. Message me for more details. I am willing to negotiate the price down. </p>
+                                </div>
+                            </div>
+                            <div class="desktop-head-buy-buttons">
+                                <button class="main-button-green">Purchase</button>
+                                <button class="main-button-green">Add To Cart</button>
+                            </div>
+                        </div>
+                        
+                        
+                    </section>
+					<section class="item-info-container">
+						<h2>2021 Celebratory Arch</h2>
+						<button class="main-button-green">Purchase</button>
+						<h2 class="text-green">500</h2>
+						<button class="main-button-green">Add To Cart</button>
+					</section>
+                    <details class="more-item-info">
+                        <summary>More Info...</summary>
+                        <ul>
+                            <li>Poster: Comf1</li>
+                            <li>Attribute: none</li>
+                            <li>Pattern: none</li>
+                            <li>
+                                Description From Poster
+                                <p>I am willing to have you pick up item any time after 2PM. Message me for more details. I am willing to negotiate the price down. </p>
+                            </li>
+                        </ul>
+                    </details>
+				</header>
+
+			<main class="main-content">
+                    <div class="reviews-container">
+                        <div class="review-statistics-container">
+                            <h3 class="text-blue">Islander Reviews</h3>
+                            <div class="stats-container">
+                                <p>5 Star</p>
+                                <div id="five-star-bar" class="stats-bar"></div>
+                                <p id="five-star-percent">50%</p>
+                            </div>
+                            <div class="stats-container">
+                                <p>4 Star</p>
+                                <div id="four-star-bar" class="stats-bar"></div>
+                                <p id="four-star-percent">20%</p>
+                            </div>
+                            <div class="stats-container">
+                                <p>3 Star</p>
+                                <div id="three-star-bar" class="stats-bar" ></div>
+                                <p id="three-star-percent">15%</p>
+                            </div>
+                            <div class="stats-container">
+                                <p>2 Star</p>
+                                <div id="two-star-bar" class="stats-bar"> </div>
+                                <p id="two-star-percent">5%</p>
+                            </div>
+                            <div class="stats-container">
+                                <p>1 Star</p>
+                                <div id="one-star-bar" class="stats-bar"> </div>
+                                <p id="one-star-percent">10%</p>
+                            </div>
+                        </div>
+                        <div class="reviews-content-posted-container">
+                            <div class="review-post-container">
+                                <h2>Leave a <span class="text-blue">Review?</span></h2>
+                                <div class="post-review-star-container">
+                                    <i class="fa-regular fa-star post-review-star"></i>
+                                    <i class="fa-regular fa-star post-review-star"></i>
+                                    <i class="fa-regular fa-star post-review-star"></i>
+                                    <i class="fa-regular fa-star post-review-star"></i>
+                                    <i class="fa-regular fa-star post-review-star"></i>
+                                </div>
+                                <textarea
+                                    name="post-review-text"
+                                    id="post-review-text"
+                                    placeholder="Review..."
+                                ></textarea>
+                                <button class="main-button-blue">Post</button>
+                            </div>
+                            
+                            <div class="reviews-posted-container">
+                                <h2 class="text-blue">Reviews</h2>
+                                <div class="posted-reviews-container">
+                                    <section class="review">
+                                        <section class="review-top-info-container">
+                                            <div class="account-icon"></div>
+                                            <h3 class="text-green"> Comf1</h3>
+                                            <div class="reviews-star-container">
+                                            <i class="fa-solid fa-star review-star"></i>
+                                            <i class="fa-solid fa-star review-star"></i>
+                                            <i class="fa-solid fa-star review-star"></i>
+                                            <i class="fa-regular fa-star review-star"></i>
+                                            <i class="fa-regular fa-star review-star"></i>
+                                        </section>
+        
+                                        <div class="review-hook-container main-border">
+                                            <p>Amazing Purchase!</p>
+                                        </div>
+                                        <div class="review-content-container main-border">
+                                            <p>Very respectful and easy to work with. Would definately buy again</p>
+                                        </div>
+                                    </section>
+                                    <section class="review">
+                                        <section class="review-top-info-container">
+                                            <div class="account-icon"></div>
+                                            <h3 class="text-green"> Sylvie</h3>
+                                            <div class="reviews-star-container">
+                                            <i class="fa-solid fa-star review-star"></i>
+                                            <i class="fa-regular fa-star review-star"></i>
+                                            <i class="fa-regular fa-star review-star"></i>
+                                            <i class="fa-regular fa-star review-star"></i>
+                                            <i class="fa-regular fa-star review-star"></i>
+                                        </section>
+        
+                                        <div class="review-hook-container main-border">
+                                            <p>Trash</p>
+                                        </div>
+                                        <div class="review-content-container main-border">
+                                            <p>This is terrible and I will never be buying from here again</p>
+                                        </div>
+                                    </section>
+                                </div>
+                                <button class="main-button-green show-more">Show More</button>
+                                </div>
+                        </div>
+                        
+                        </div>
+                    </div>
+					
+
+			</main>
+            <footer class="main-footer">
+				<div class="footer-social-icons">
+					<i
+						class="footer-icon fa-brands fa-facebook"
+						title="facebook"
+					></i>
+					<i
+						class="footer-icon fa-brands fa-twitter"
+						title="twitter"
+					></i>
+					<i
+						class="footer-icon fa-brands fa-youtube"
+						title="youtube"
+					></i>
+					<i
+						class="footer-icon fa-brands fa-patreon"
+						title="patreon"
+					></i>
+					<i
+						class="footer-icon fa-brands fa-instagram"
+						title="instagram"
+					></i>
+				</div>
+				<div class="footer-links-container">
+					<div class="footer-links">
+						<a href="#"><p>Pocket</p></a>
+						<a href="#"><p>Requests</p></a>
+						<a href="#"><p>Create</p></a>
+						<a href="#"><p>Login</p></a>
+						<a href="#"><p>Sign In</p></a>
+					</div>
+					<div class="footer-links">
+						<a href="#"><p>Settings</p></a>
+						<a href="#"><p>Moderation</p></a>
+						<a href="#"><p>Become a mod</p></a>
+						<a href="#"><p>Chat guidelines</p></a>
+						<a href="#"><p>How to post</p></a>
+					</div>
+					<div class="footer-links">
+						<a href="#"><p>Rules</p></a>
+						<a href="#"><p>Updates</p></a>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

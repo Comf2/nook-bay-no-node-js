@@ -1,0 +1,231 @@
+body {
+	font-family: 'Baloo 2';
+}
+.item-container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin-bottom: 1rem;
+}
+.item-image {
+	width: 100%;
+	padding: 3rem;
+}
+.desktop-item-info-container {
+	display: none;
+}
+.item-info-container {
+	--font-weight: 300;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	background-color: red;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	place-items: center;
+	font-size: 0.8rem;
+	font-weight: calc(var(--font-weight) * 2);
+}
+.item-info-container h2 {
+	font-weight: var(--font-weight);
+}
+.more-item-info * {
+	padding: 0;
+	margin: 0;
+}
+.more-item-info li {
+	padding: 0.5vmin 7vmin;
+}
+.review-post-container {
+	display: flex;
+	flex-direction: column;
+	gap: 5vmin;
+	background-color: var(--secondary-bg);
+	padding: 1.5rem 1rem;
+}
+#post-review-text {
+	background-color: transparent;
+	border: 2px solid var(--accent-grey-opacity);
+	border-radius: 9px;
+	min-height: 7rem;
+	color: var(--main-text);
+	padding: 2vmin;
+}
+.main-button-blue {
+	width: fit-content;
+	margin-left: auto;
+}
+.reviews-posted-container {
+	display: flex;
+	flex-direction: column;
+	padding: 1.5rem 1rem;
+	gap: 2vmin;
+}
+.review {
+	border-bottom: solid 2px var(--accent-grey-opacity);
+	padding: 5vmin 0;
+	display: flex;
+	flex-direction: column;
+	gap: 3vmin;
+	color: var(--main-text);
+}
+.review-top-info-container {
+	display: flex;
+	gap: 2vmin;
+}
+.account-icon {
+	background-color: var(--secondary-bg);
+	width: 2rem;
+	aspect-ratio: 1/1;
+	border-radius: 50vw;
+}
+.reviews-star-container {
+	margin-left: auto;
+}
+.show-more {
+	font-weight: 900;
+	font-size: 1.3em;
+	width: fit-content;
+	margin: 3vmin auto;
+	margin-bottom: 0;
+}
+.review-statistics-container {
+	display: none;
+}
+@media screen and (min-width: 1000px) {
+	.item-info-container {
+		display: none;
+	}
+	.desktop-item-info-container {
+		padding-top: 5vmin;
+		display: flex;
+		flex-direction: column;
+		gap: 5vmin;
+	}
+	.desktop-top-info {
+		border-bottom: 2px solid var(--accent-grey-opacity);
+	}
+
+	.item-container {
+		flex-direction: row;
+	}
+	.item-image {
+		background-color: var(--secondary-bg);
+		width: 50%;
+		margin: 0 10vmin;
+	}
+	.desktop-head-info {
+		display: flex;
+		flex-direction: row;
+	}
+	.desktop-head-main-info {
+		display: flex;
+		flex-direction: column;
+		gap: 2vmin;
+	}
+	.desktop-head-buy-buttons {
+		width: 20rem;
+		display: flex;
+		flex-direction: column;
+		gap: 3vmin;
+		align-items: center;
+	}
+	.desktop-head-buy-buttons button {
+		width: 75%;
+	}
+	.desktop-head-buy-buttons button:first-child {
+		background-color: var(--secondary-green);
+	}
+	.desktop-head-buy-buttons button:first-child:hover {
+		background-color: var(--main-green);
+	}
+	.more-item-info {
+		display: none;
+	}
+	.reviews-container {
+		display: flex;
+		padding: 0 10vmin;
+		gap: 7vmin;
+		justify-content: center;
+	}
+	.main-content {
+		width: 100%;
+	}
+	.review-post-container {
+		border-radius: 9px;
+	}
+	.reviews-content-posted-container {
+		width: 100%;
+	}
+	.review-statistics-container {
+		display: flex;
+		flex-direction: column;
+		font-size: 1.5em;
+		gap: 2vmin;
+		align-items: center;
+		text-align: center;
+	}
+	.stats-container {
+		font-size: 1rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 1vmin;
+	}
+	.stats-container p {
+		width: 3rem;
+	}
+	.stats-bar {
+		width: 10rem;
+		height: 100%;
+		border-radius: 9px;
+		background-color: var(--secondary-bg);
+		position: relative;
+		overflow: hidden;
+	}
+	#one-star-bar::before {
+		content: '';
+		height: 100%;
+		width: 10%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		background-color: var(--secondary-blue);
+	}
+	#two-star-bar::before {
+		content: '';
+		height: 100%;
+		width: 5%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		background-color: var(--secondary-blue);
+	}
+	#three-star-bar::before {
+		content: '';
+		height: 100%;
+		width: 15%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		background-color: var(--secondary-blue);
+	}
+	#four-star-bar::before {
+		content: '';
+		height: 100%;
+		width: 20%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		background-color: var(--secondary-blue);
+	}
+	#five-star-bar::before {
+		content: '';
+		height: 100%;
+		width: 50%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		background-color: var(--secondary-blue);
+	}
+}

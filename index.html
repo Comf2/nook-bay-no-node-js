@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./production/styles/reset.css" />
+    <link rel="stylesheet" href="./production/styles/main.css" />
+    <link rel="stylesheet" href="./production/styles/navbar.css" />
+    <link rel="stylesheet" href="/production/styles/index.css" />
+    <script src="./production/js/main.js" defer></script>
+    <script src="./production/js/caro.js" defer></script>
+    <script src="./production/js/items/index-cards.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/c503d7f164.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <div class="nav-top-container">
+        <!-- hamburger icon -->
+        <button
+          class="toggle-nav-button button-reset"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
+          <svg
+            stroke="var(--button-color)"
+            fill="none"
+            class="hamburger"
+            viewBox="-10 -10 120 120"
+            width="60"
+          >
+            <path
+              class="line"
+              stroke-width="10"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m 20 40 h 60 a 1 1 0 0 1 0 20 h -60 a 1 1 0 0 1 0 -40 h 30 v 70"
+            ></path>
+          </svg>
+        </button>
+        <div class="mobile-search-container">
+          <div class="search-container">
+            <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
+            <input
+              type="search"
+              name="search-item"
+              id="search-item"
+              class="main-search"
+              placeholder="Item..."
+            />
+          </div>
+        </div>
+      </div>
+      <ul class="nav-list">
+        <li>
+          <a href="./index.html">
+            <img
+              src="./production/assets/svg/NookBay.svg"
+              alt="Nook Bay"
+              aria-hidden="true"
+              class="main-logo"
+            />
+          </a>
+        </li>
+        <li>
+          <i class="fa-solid fa-bag-shopping"></i>
+          <p>Pocket</p>
+        </li>
+        <li>
+          <i class="fa-solid fa-list"></i>
+          <p>Requests</p>
+        </li>
+        <li>
+          <i class="fa-solid fa-plus"></i>
+          <p>Create</p>
+        </li>
+        <li class="desktop-search-container">
+          <div class="search-container">
+            <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
+            <input
+              type="search"
+              name="search-item"
+              id="search-item"
+              class="main-search"
+              placeholder="Item..."
+            />
+          </div>
+        </li>
+        <li
+          onclick="window.location='./production/assets/pages/log-in.html'"
+          class="mobile-dropdown-content"
+        >
+          <i class="fa-solid fa-right-to-bracket"></i>
+          <p>Login</p>
+        </li>
+        <li
+          onclick="window.location='./production/assets/pages/sign-up.html'"
+          class="mobile-dropdown-content"
+        >
+          <i class="fa-solid fa-check"></i>
+          <p>Sign Up</p>
+        </li>
+        <li class="toggle-light-mode mobile-dropdown-content">
+          <i class="fa-solid fa-sun"></i>
+          <p>Dark Mode</p>
+        </li>
+        <li class="account-container">
+          <i id="account-icon" class="fa-solid fa-user"></i>
+          <div data-open="false" style="display: none" class="account-dropdown">
+            <ul>
+              <li
+                onclick="window.location='./production/assets/pages/log-in.html'"
+              >
+                <i class="fa-solid fa-right-to-bracket"></i>
+                <p>Login</p>
+              </li>
+              <li
+                onclick="window.location='./production/assets/pages/sign-up.html'"
+              >
+                <i class="fa-solid fa-check"></i>
+                <p>Sign Up</p>
+              </li>
+              <li class="toggle-light-mode">
+                <i class="fa-solid fa-sun"></i>
+                <p>Dark Mode</p>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <div class="container">
+      <main class="main-content">
+        <div class="nav-spacer"></div>
+        <header class="index-caro">
+          <div class="caro-container">
+            <div class="caro-image-container">
+              <img
+                src="./production/assets/images/animal-crossing-day.jpg"
+                alt=""
+                class="caro-image"
+                aria-hidden="true"
+              />
+              <img
+                src="./production/assets/images/animal-crossing-sunset.jpg"
+                alt=""
+                class="caro-image"
+                aria-hidden="true"
+              />
+              <img
+                src="./production/assets/images/animal-crossing-night.jpg"
+                alt=""
+                class="caro-image"
+                aria-hidden="true"
+              />
+              <img
+                src="./production/assets/images/animal-crossing-old.jpeg"
+                alt=""
+                class="caro-image"
+                aria-hidden="true"
+              />
+            </div>
+            <div class="caro-content-container">
+              <div class="caro-content">
+                <img
+                  src="./production/assets/svg/blob-background-opacity.svg"
+                  alt=""
+                  aria-hidden="true"
+                  class="title-background-blob"
+                />
+                <div class="caro-content-text-container">
+                  <h1 class="title">Nookazon</h1>
+                  <h2 class="title">
+                    Purchase, Sell, and Communicate all in one place.
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <section class="top-search-container">
+          <h2 class="sub-title">Find any item you'd like</h2>
+        </section>
+        <aside class="filter-side-bar">
+          <div class="filter-title-container">
+            <i class="fa-solid fa-filter" id="filter-icon"></i>
+            <h2 class="sub-title" id="filter-title">
+              Want something specific?
+            </h2>
+          </div>
+          <div class="filter-chips">
+            <div class="filter-chip">Furniture</div>
+            <div class="filter-chip">DIY</div>
+            <div class="filter-chip">Wall</div>
+            <div class="filter-chip">Outdoor</div>
+            <div class="filter-chip">Floor</div>
+          </div>
+        </aside>
+        <main class="index-main">
+          <div class="item-cards"></div>
+        </main>
+        <footer></footer>
+      </main>
+    </div>
+  </body>
+</html>

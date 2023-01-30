@@ -1,0 +1,340 @@
+:root {
+	--main-green: #9effb1;
+	--secondary-green: #6bff89;
+	--main-blue: #82f1f7;
+	--secondary-blue: #22e7f1;
+	--main-brown: #c48d40;
+	--secondary-brown: #b47f35;
+	--main-yellow: #fff461;
+	--secondary-yellow: #fae900;
+	--main-bg: #fffffa;
+	--secondary-bg: #ececec;
+	--accent-grey: #696969;
+	--accent-grey-opacity: hsla(0, 0%, 41%, 0.3);
+	--text-dark: #313131;
+	--main-text: #313131;
+	--secondary-text: #696969;
+}
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+	scrollbar-width: thin;
+	scrollbar-color: #9effb1 var(--main-bg);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+	background: var(--main-bg);
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: #9effb1;
+	border-radius: 999px;
+	border: 0px solid var(--main-bg);
+}
+
+@font-face {
+	font-family: 'Baloo 2';
+	src: url('../assets/fonts/Baloo2-VariableFont_wght.ttf');
+}
+body {
+	background-color: var(--main-bg);
+	width: 100%;
+	min-height: 100vh;
+	color: var(--main-text);
+	font-family: 'Baloo 2';
+	overflow-x: hidden;
+}
+.title {
+	background: linear-gradient(
+		90deg,
+		var(--main-brown) 0%,
+		var(--secondary-brown) 120%
+	);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+.sub-title {
+	background: linear-gradient(90deg, #b47f35 43.35%, #22e7f1 63.64%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+.minor-text {
+	color: var(--secondary-text);
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+.text-blue {
+	color: var(--secondary-blue);
+}
+.text-green {
+	color: var(--secondary-green);
+}
+button {
+	border: none;
+}
+.main-button-green {
+	cursor: pointer;
+	padding: 0 5vmin;
+	background-color: var(--main-green);
+	border-radius: 50vw;
+	transition: all 0.15s ease;
+	color: var(--text-dark);
+}
+.main-button-green:hover {
+	background-color: var(--secondary-green);
+}
+.main-button-green:active {
+	scale: 1.05;
+}
+.main-button-blue {
+	cursor: pointer;
+	padding: 0 5vmin;
+	background-color: var(--main-blue);
+	border-radius: 50vw;
+	transition: all 0.15s ease;
+	color: var(--text-dark);
+}
+.main-button-blue:hover {
+	background-color: var(--secondary-blue);
+}
+.main-button-blue:active {
+	scale: 1.05;
+}
+.main-border {
+	border: 2px solid var(--accent-grey-opacity);
+	border-radius: 9px;
+	padding: 2vmin;
+}
+.container {
+	display: flex;
+	flex-direction: column;
+	max-width: 1800px;
+	align-items: center;
+	margin: 0 auto;
+}
+/* header */
+.caro-container {
+	display: grid;
+	place-items: center;
+}
+.caro-image-container,
+.caro-content-container {
+	grid-row: 1;
+	grid-column: 1;
+	background-size: cover !important;
+	background: radial-gradient(
+			ellipse at center,
+			rgba(0, 0, 0, 0) 0%,
+			rgba(0, 0, 0, 0) 30%,
+			rgba(0, 0, 0, 0.45) 100%
+		),
+}
+.caro-content-container {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+}
+.caro-content {
+	text-align: center;
+	display: grid;
+	place-items: center;
+	margin: 0 1rem;
+}
+.caro-content-text-container {
+	grid-row: 1;
+	grid-column: 1;
+	padding: 2em;
+	font-size: 0.8em;
+}
+.title-background-blob {
+	grid-row: 1;
+	grid-column: 1;
+	width: 100%;
+}
+.caro-image {
+	width: 100vw;
+	height: 50vh;
+	min-height: 20rem;
+	object-fit: cover;
+}
+
+/* main content */
+.main-content {
+	display: flex;
+	flex-direction: column;
+}
+
+/* search */
+.top-search-container {
+	text-align: center;
+}
+/* filter styles */
+.filter-side-bar {
+	overflow: hidden;
+}
+.filter-title-container {
+	font-weight: 600;
+	font-size: 1em;
+}
+.filter-title-container {
+	display: flex;
+	align-items: center;
+	padding: 0 3vmin;
+	text-align: center;
+}
+#filter-icon {
+	position: absolute;
+	color: var(--main-text);
+}
+#filter-title {
+	margin: 0 auto;
+}
+.filter-chips {
+	display: flex;
+	gap: 1rem;
+	width: 75%;
+	overflow-x: scroll;
+	margin: 0 auto;
+	justify-content: center;
+	color: var(--text-dark);
+}
+.filter-chip {
+	padding: 1vmin 2vmin;
+	background-color: var(--main-blue);
+	border-radius: 100vw;
+}
+
+.main-footer {
+	width: 100%;
+	min-height: 25vh;
+	min-height: 10rem;
+	background-color: var(--secondary-bg);
+	color: var(--main-text);
+	padding: 2vmin;
+}
+.footer-social-icons {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 3vmin;
+	font-size: 2em;
+	margin: 2vmin;
+	cursor: pointer;
+}
+.footer-icon {
+	transition: all 0.2s ease;
+}
+.footer-icon:hover {
+	color: var(--secondary-blue);
+}
+.main-footer a {
+	text-decoration: none;
+	color: inherit;
+	opacity: 0.7;
+}
+.footer-links-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5vmin;
+	margin: 0 2vmin;
+}
+.footer-links {
+	display: flex;
+	flex-direction: column;
+	gap: 1vmin;
+}
+.footer-links p:hover {
+	color: var(--secondary-blue);
+	text-decoration: underline;
+}
+/* basic card design */
+.item-cards{
+	display: grid;
+	grid-template-columns: repeat(10, 15rem);
+	overflow: scroll;
+
+}
+.item-card {
+	background-color: var(--secondary-bg);
+	border-radius: 10px;
+	padding: 3vmin 2vmin;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	color: var(--main-text);
+}
+.item-card > a {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	text-decoration: none;
+	padding-bottom: 1vmin;
+	width: 10rem;
+}
+.item-card button {
+	padding: 1vmin; 
+	aspect-ratio: 1/1;
+	display: grid;
+	place-items: center;
+	position: absolute;
+	left: 0;
+}
+.item-card .bells-icon  {
+	width: 2rem;
+}
+.purchase-info-container {
+	display: flex;
+	align-items: center;
+	position: relative;
+	justify-content: center;
+	width: 100%;
+	position: relative;
+	margin-top: auto;
+}
+.card-item-price-container{
+	display: flex;
+	align-items: center;
+}
+/* .purchase-info-container button {
+	border: none;
+	background-color: transparent;
+	padding: 1vmin;
+	border-radius: 50vw;
+	aspect-ratio: 1/1;
+	color: var(--text-dark);
+	transition: all 0.3s ease-in-out;
+	position: absolute;
+	margin: 0 1vmin;
+	cursor: pointer;
+	left: 0;
+}
+.purchase-info-container button:hover {
+	background-color: var(--accent-grey-opacity);
+	transform: translateX(1px);
+} */
+.purchase-info-container p {
+	color: var(--main-text);
+}
+
+
+/* media query for desktop screens */
+@media screen and (min-width: 1000px) {
+	.nav-spacer {
+		display: none;
+	}
+	.caro-content-text-container {
+		font-size: 1em;
+	}
+}
