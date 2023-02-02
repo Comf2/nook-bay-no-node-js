@@ -34,6 +34,8 @@
 		src="../../js/items/init-item-page.js" 
 		defer>
 	</script>
+	<script src="../../js/item.js" defer></script>
+	<script src="../../js/scroll-effect.js" defer></script>
 		<script
 			src="https://kit.fontawesome.com/c503d7f164.js"
 			crossorigin="anonymous"
@@ -120,14 +122,14 @@
 					</div>
 				</li>
 				<li
-					onclick="window.location='./production/assets/pages/log-in.html'"
+					onclick="window.location='./log-in.html'"
 					class="mobile-dropdown-content"
 				>
 					<i class="fa-solid fa-right-to-bracket"></i>
 					<p>Login</p>
 				</li>
 				<li
-					onclick="window.location='./production/assets/pages/sign-up.html'"
+					onclick="window.location='./sign-up.html'"
 					class="mobile-dropdown-content"
 				>
 					<i class="fa-solid fa-check"></i>
@@ -149,13 +151,13 @@
 					>
 						<ul>
 							<li
-								onclick="window.location='./production/assets/pages/log-in.html'"
+								onclick="window.location='./log-in.html'"
 							>
 								<i class="fa-solid fa-right-to-bracket"></i>
 								<p>Login</p>
 							</li>
 							<li
-								onclick="window.location='./production/assets/pages/sign-up.html'"
+								onclick="window.location='./sign-up.html'"
 							>
 								<i class="fa-solid fa-check"></i>
 								<p>Sign Up</p>
@@ -223,32 +225,35 @@
 			<main class="main-content">
                     <div class="reviews-container">
                         <div class="review-statistics-container">
-                            <h3 class="text-blue">Islander Reviews</h3>
-                            <div class="stats-container">
-                                <p>5 Star</p>
-                                <div id="five-star-bar" class="stats-bar"></div>
-                                <p id="five-star-percent">50%</p>
-                            </div>
-                            <div class="stats-container">
-                                <p>4 Star</p>
-                                <div id="four-star-bar" class="stats-bar"></div>
-                                <p id="four-star-percent">20%</p>
-                            </div>
-                            <div class="stats-container">
-                                <p>3 Star</p>
-                                <div id="three-star-bar" class="stats-bar" ></div>
-                                <p id="three-star-percent">15%</p>
-                            </div>
-                            <div class="stats-container">
-                                <p>2 Star</p>
-                                <div id="two-star-bar" class="stats-bar"> </div>
-                                <p id="two-star-percent">5%</p>
-                            </div>
-                            <div class="stats-container">
-                                <p>1 Star</p>
-                                <div id="one-star-bar" class="stats-bar"> </div>
-                                <p id="one-star-percent">10%</p>
-                            </div>
+							<div class="stat-info-container">
+								<h3 class="text-blue">Islander Reviews</h3>
+								<div class="stats-container">
+									<p>5 Star</p>
+									<div id="five-star-bar" class="stats-bar"></div>
+									<p id="five-star-percent">50%</p>
+								</div>
+								<div class="stats-container">
+									<p>4 Star</p>
+									<div id="four-star-bar" class="stats-bar"></div>
+									<p id="four-star-percent">20%</p>
+								</div>
+								<div class="stats-container">
+									<p>3 Star</p>
+									<div id="three-star-bar" class="stats-bar" ></div>
+									<p id="three-star-percent">15%</p>
+								</div>
+								<div class="stats-container">
+									<p>2 Star</p>
+									<div id="two-star-bar" class="stats-bar"> </div>
+									<p id="two-star-percent">5%</p>
+								</div>
+								<div class="stats-container">
+									<p>1 Star</p>
+									<div id="one-star-bar" class="stats-bar"> </div>
+									<p id="one-star-percent">10%</p>
+								</div>
+							</div>
+                            
                         </div>
                         <div class="reviews-content-posted-container">
                             <div class="review-post-container">

@@ -6,6 +6,7 @@ body {
 	flex-direction: column;
 	width: 100%;
 	margin-bottom: 1rem;
+	flex-wrap: wrap;
 }
 .item-image {
 	width: 100%;
@@ -91,7 +92,29 @@ body {
 .review-statistics-container {
 	display: none;
 }
-@media screen and (min-width: 1000px) {
+/* Tablet Media Query */
+@media screen and (min-width:750px) and (max-width:1050px){
+	.item-container{
+		display: grid;
+		grid-template-columns: 3fr 1fr;
+		grid-template-rows: 3fr 1fr;
+	}
+	.item-image{
+		width: 70%;
+		margin: auto;
+	}
+	.item-info-container{
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		background-color: var(--secondary-bg);
+		align-items: center;
+		justify-content: center;
+
+	}
+}
+/* Desktop Media Query */
+@media screen and (min-width: 1050px) {
 	.item-info-container {
 		display: none;
 	}
@@ -100,6 +123,7 @@ body {
 		display: flex;
 		flex-direction: column;
 		gap: 5vmin;
+		flex: 1;
 	}
 	.desktop-top-info {
 		border-bottom: 2px solid var(--accent-grey-opacity);
@@ -110,7 +134,8 @@ body {
 	}
 	.item-image {
 		background-color: var(--secondary-bg);
-		width: 50%;
+		width: 40%;
+		object-fit: cover;
 		margin: 0 10vmin;
 	}
 	.desktop-head-info {
@@ -129,9 +154,6 @@ body {
 		gap: 3vmin;
 		align-items: center;
 	}
-	.desktop-head-buy-buttons button {
-		width: 75%;
-	}
 	.desktop-head-buy-buttons button:first-child {
 		background-color: var(--secondary-green);
 	}
@@ -146,6 +168,7 @@ body {
 		padding: 0 10vmin;
 		gap: 7vmin;
 		justify-content: center;
+		margin-bottom: 2rem;
 	}
 	.main-content {
 		width: 100%;
@@ -154,15 +177,28 @@ body {
 		border-radius: 9px;
 	}
 	.reviews-content-posted-container {
-		width: 100%;
+		width: 80%;
 	}
 	.review-statistics-container {
+		display: flex;
+		flex-direction: column;
+		gap: 2vmin;
+		align-items: center;
+		text-align: center;
+		width: 20%;
+		position: relative;
+	}
+	.stat-info-container{
 		display: flex;
 		flex-direction: column;
 		font-size: 1.5em;
 		gap: 2vmin;
 		align-items: center;
 		text-align: center;
+		background-color: var(--secondary-bg);
+		padding: 2vmin;
+		border-radius: 10px;
+		position: absolute;
 	}
 	.stats-container {
 		font-size: 1rem;
@@ -176,7 +212,7 @@ body {
 	}
 	.stats-bar {
 		width: 10rem;
-		height: 100%;
+		height: 1rem;
 		border-radius: 9px;
 		background-color: var(--secondary-bg);
 		position: relative;
