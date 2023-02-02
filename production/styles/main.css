@@ -14,6 +14,7 @@
 	--text-dark: #313131;
 	--main-text: #313131;
 	--secondary-text: #696969;
+	--main-transition-timing:cubic-bezier(.19,.39,.59,.7);
 }
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
@@ -82,12 +83,15 @@ body {
 button {
 	border: none;
 }
+input:active, input:focus{
+	outline: 1px var(--secondary-green) solid;
+}
 .main-button-green {
 	cursor: pointer;
 	padding: 0 5vmin;
 	background-color: var(--main-green);
 	border-radius: 50vw;
-	transition: all 0.15s ease;
+	transition: all 0.15s var(--main-transition-timing);
 	color: var(--text-dark);
 }
 .main-button-green:hover {
@@ -101,7 +105,7 @@ button {
 	padding: 0 5vmin;
 	background-color: var(--main-blue);
 	border-radius: 50vw;
-	transition: all 0.15s ease;
+	transition: all 0.15s var(--main-transition-timing);
 	color: var(--text-dark);
 }
 .main-button-blue:hover {
@@ -232,11 +236,18 @@ input{
 	margin: 0 auto;
 	justify-content: center;
 	color: var(--text-dark);
+	
 }
 .filter-chip {
 	padding: 1vmin 2vmin;
 	background-color: var(--main-blue);
 	border-radius: 100vw;
+	cursor: pointer;
+	transition: all var(--main-transition-timing) 0.5s ;
+
+}
+.filter-chip:hover{
+	background-color: var(--secondary-green);
 }
 
 .main-footer {
@@ -256,7 +267,7 @@ input{
 	cursor: pointer;
 }
 .footer-icon {
-	transition: all 0.2s ease;
+	transition: all 0.2s var(--main-transition-timing);
 }
 .footer-icon:hover {
 	color: var(--secondary-blue);

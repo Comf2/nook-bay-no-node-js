@@ -43,6 +43,11 @@
     background-color: var(--main-blue);
     color: var(--accent-grey);
     border-radius: inherit;
+    color: var(--text-dark);
+    transition: all var(--main-transition-timing) 0.3s;
+}
+#submit-button:hover{
+    background-color: var(--main-green);
 }
 .text-line-center{
     width: 100%;
@@ -72,6 +77,11 @@
     background-color: var(--main-green);
     border: none;
     border-radius: 10px;
+    color: var(--text-dark);
+    transition: all var(--main-transition-timing) 0.3s;
+}
+#make-an-account-button:hover{
+    background-color: var(--main-blue);
 }
 .main-footer{
     position: absolute;

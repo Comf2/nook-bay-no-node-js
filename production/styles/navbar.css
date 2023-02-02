@@ -21,7 +21,7 @@ body {
 	position: fixed;
 	left: 0;
 	top: 0;
-	transition: all 0.5s ease-in-out;
+	transition: all 0.5s var(--main-transition-timing);
 	z-index: 9999;
 }
 .toggle-nav-button {
@@ -37,6 +37,7 @@ body {
 .hamburger {
 	--button-color: var(--text-dark);
 	transition: translate 1s, rotate 1s;
+	transition-timing-function: var(--main-transition-timing);
 	overflow: hidden;
 }
 .toggle-nav-button[aria-expanded='true'] .hamburger {
@@ -67,7 +68,7 @@ body {
 	align-items: center;
 	gap: 2vmin;
 	opacity: 0;
-	transition: all 0.5s ease-in-out;
+	transition: all 0.5s var(--main-transition-timing);
 	display: none;
 }
 
@@ -91,7 +92,7 @@ body {
 	display: none;
 }
 .nav-list p {
-	transition: all 0.3s ease-in-out;
+	transition: all 0.3s var(--main-transition-timing);
 	padding: 0.1rem;
 }
 .nav-list p:hover {
@@ -156,7 +157,7 @@ body {
 	padding: 0.5rem;
 	cursor: pointer;
 	border-radius: 50vw;
-	transition: 0.2s all ease-in-out;
+	transition: 0.2s all var(--main-transition-timing);
 	color: var(--text-dark);
 }
 #search-icon:hover {
@@ -221,7 +222,7 @@ body {
 		padding: 1rem;
 		background-color: var(--secondary-green);
 		border-radius: 50vw;
-		transition: all ease-in-out 0.3s;
+		transition: all var(--main-transition-timing) 0.3s;
 	}
 	#account-icon:hover {
 		transform: translateY(-5px);
