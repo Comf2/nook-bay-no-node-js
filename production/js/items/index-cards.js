@@ -1,10 +1,9 @@
-const housewareURL = 'https://acnhapi.com/v1a/houseware/';
-let container = document.querySelectorAll('.item-cards');
+let container = document.querySelectorAll(".item-cards");
 let purchaseButtons = [];
 fetch(housewareURL)
   .then((res) => res.json())
   .then((data) => handleItemData(data))
-  .catch((error) => console.log('ERROR', error));
+  .catch((error) => console.log("ERROR", error));
 
 function handleItemData(data) {
   console.log(data);
@@ -15,10 +14,10 @@ function handleItemData(data) {
       count++;
       if (count <= 10) {
         let itemCard = createItemCard(item);
-        container[0].insertAdjacentHTML('beforeend', itemCard);
+        container[0].insertAdjacentHTML("beforeend", itemCard);
       } else if (count <= 20) {
         let itemCard = createItemCard(item);
-        container[1].insertAdjacentHTML('beforeend', itemCard);
+        container[1].insertAdjacentHTML("beforeend", itemCard);
       }
     });
   });
@@ -26,8 +25,8 @@ function handleItemData(data) {
 }
 
 function createItemCard(item) {
-  let itemVarient = '';
-  let itemPattern = '';
+  let itemVarient = "";
+  let itemPattern = "";
   if (item.variant != null) {
     itemVarient = item.variant;
   }
@@ -35,11 +34,11 @@ function createItemCard(item) {
     itemPattern = item.pattern;
   }
   let itemData = {
-    name: `${item.name['name-USen']}`,
-    fullName: `${itemVarient} ${itemPattern} ${item.name['name-USen']}`,
+    name: `${item.name["name-USen"]}`,
+    fullName: `${itemVarient} ${itemPattern} ${item.name["name-USen"]}`,
     image: item.image_uri,
-    buyPrice: Math.floor(item['sell-price'] * 2.3),
-    id: item['internal-id'],
+    buyPrice: Math.floor(item["sell-price"] * 2.3),
+    id: item["internal-id"],
   };
   let itemMarkdown = `
     <div class="item-card">
@@ -85,21 +84,21 @@ function createItemCard(item) {
 
 function initPurchase() {
   let purchaseButtons = document.querySelectorAll(
-    '.purchase-item-card-container'
+    ".purchase-item-card-container"
   );
   purchaseButtons.forEach((button) => {
-    button.addEventListener('click', function (e) {
+    button.addEventListener("click", function (e) {
       initItemPage(button);
     });
   });
 }
 
 function initItemPage(button) {
-  let itemImage = button.getAttribute('data-image');
-  let itemName = button.getAttribute('data-name');
-  let itemPrice = button.getAttribute('data-price');
+  let itemImage = button.getAttribute("data-image");
+  let itemName = button.getAttribute("data-name");
+  let itemPrice = button.getAttribute("data-price");
 
-  localStorage.setItem('itemImage', `${itemImage}`);
-  localStorage.setItem('itemName', itemName);
-  localStorage.setItem('itemPrice', itemPrice);
+  localStorage.setItem("itemImage", `${itemImage}`);
+  localStorage.setItem("itemName", itemName);
+  localStorage.setItem("itemPrice", itemPrice);
 }

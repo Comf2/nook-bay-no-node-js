@@ -37,9 +37,23 @@
 			src="../../js/main.js"
 			defer
 		></script>
+		<script 
+			src="../../js/account/init-account-database.js" 
+			defer></script>
+
+	<!-- needs to be put before signup.js and after init-page -->
+		<script 
+			src="../../js/account/init-sign-in.js" 
+			defer></script>
+		<script 
+			src="../../js/account/init-account-pages.js" 
+			defer></script>
+		<script 
+			src="../../js/account/sign-up.js" 
+			defer></script>
 		<title>Document</title>
 	</head>
-	<body>
+	<body data-page="sign-up">
 		<nav class="nav-bar">
 			<div class="nav-top-container">
 				<button
@@ -150,7 +164,7 @@
 						<h2><span class="text-blue"> Sign</span> Up</h2>
 						<div class="auth-input-container">
 							<label
-								for="username-input"
+								for="username-signup"
 								class="minor-text"
 							>
 								Username
@@ -158,13 +172,13 @@
 							<input
 								type="text"
 								name="username-input"
-								id="username-input"
+								id="username-signup"
 								class="auth-input"
 							/>
 						</div>
 						<div class="auth-input-container">
 							<label
-								for="password-input"
+								for="password-signup"
 								class="minor-text"
 							>
 								Password
@@ -172,20 +186,25 @@
 							<input
 								type="text"
 								name="password-input"
-								id="password-input"
+								id="password-signup"
 								class="auth-input"
 							/>
 						</div>
-						<button id="submit-button">Continue</button>
+						<button id="signup-submit-button">Continue</button>
 					</section>
-					<h3 class="minor-text text-line-center">
-						<p>Already Settled?</p>
-					</h3>
-					<a href="./log-in.html">
-						<button id="make-an-account-button">Sign In</button>
-					</a>
+					<div class="sign-in-hook-container">
+						<h3 class="minor-text text-line-center">
+							<p>Already Settled?</p>
+						</h3>
+						<a href="./log-in.html">
+							<button class="main-button-green">Sign In</button>
+						</a>
+					</div>
+					
 				</div>
 			</main>
+			<p>For Debugging:</p>
+			<button class="main-button-green clear-data">Clear Data</button>
 			<footer class="main-footer">
 				<div class="footer-social-icons">
 					<i

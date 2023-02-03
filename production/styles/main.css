@@ -122,6 +122,29 @@ input:active, input:focus{
 .text-lg{
 	font-size: 2.5em;
 }
+.text-line-center{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    isolation: isolate;
+}
+.text-line-center p {
+    padding: 0 2vmin;
+    width: fit-content;
+    background-color: var(--main-bg);
+}
+.text-line-center::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    width: 100%;
+    height: calc(50% + 1px);
+    border-bottom: 1px solid var(--accent-grey-opacity);
+}
 input{
 	background-color: transparent;
 	padding: 0;
