@@ -43,4 +43,5 @@ function initSignIn(username, password) {
     password: `${password}`,
     signedIn: true,
   });
+  window.location.reload();
 }

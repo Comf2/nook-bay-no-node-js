@@ -1,6 +1,6 @@
 function initAccountPage(username) {
   //placeholder
-  const container = document.querySelector('.container');
-
-  container.insertAdjacentHTML(`beforeend`, `<h1>Hello, ${username}</h1>`);
+  const userGreetingEle = document.querySelector('.user-greeting');
+  let usernameMarkdown = `<h1> Hi, ${username}</h1>`;
+  userGreetingEle.insertAdjacentHTML('beforeend', usernameMarkdown);
 }

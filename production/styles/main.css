@@ -19,8 +19,8 @@
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
 * {
-	scrollbar-width: thin;
-	scrollbar-color: #9effb1 var(--main-bg);
+	scrollbar-width: thick;
+	scrollbar-color: var(--secondary-green) var(--main-bg);
 }
 
 /* Chrome, Edge, and Safari */
@@ -34,7 +34,7 @@
 }
 
 *::-webkit-scrollbar-thumb {
-	background-color: #9effb1;
+	background-color: var(--secondary-green);
 	border-radius: 999px;
 	border: 0px solid var(--main-bg);
 }
