@@ -2,18 +2,57 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./production/styles/reset.css" />
-    <link rel="stylesheet" href="./production/styles/main.css" />
-    <link rel="stylesheet" href="./production/styles/navbar.css" />
-    <link rel="stylesheet" href="/production/styles/index.css" />
-    <script src="./production/js/main.js" defer></script>
-    <script src="./production/js/caro.js" defer></script>
-    <script src="./production/js/items/index-cards.js" defer></script>
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="./production/styles/reset.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./production/styles/main.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./production/styles/navbar.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/production/styles/index.css"
+    />
+    <script
+      src="./production/js/main.js"
+      defer
+    ></script>
+    <script
+      src="./production/js/caro.js"
+      defer
+    ></script>
+    <script
+      src="./production/js/items/index-cards.js"
+      defer
+    ></script>
     <script
       src="https://kit.fontawesome.com/c503d7f164.js"
       crossorigin="anonymous"
+    ></script>
+    <script
+      src="./production/js/account/init-account-database.js"
+      defer
+    ></script>
+    <script
+      src="./production/js/account/init-sign-in.js"
+      defer
+    ></script>
+    <script
+      src="./production/js/account/init-account-pages.js"
+      defer
     ></script>
     <title>Document</title>
   </head>
@@ -44,7 +83,10 @@
         </button>
         <div class="mobile-search-container">
           <div class="search-container">
-            <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
+            <i
+              class="fa-solid fa-magnifying-glass"
+              id="search-icon"
+            ></i>
             <input
               type="search"
               name="search-item"
@@ -80,7 +122,10 @@
         </li>
         <li class="desktop-search-container">
           <div class="search-container">
-            <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
+            <i
+              class="fa-solid fa-magnifying-glass"
+              id="search-icon"
+            ></i>
             <input
               type="search"
               name="search-item"
@@ -109,16 +154,25 @@
           <p>Dark Mode</p>
         </li>
         <li class="account-container">
-          <i id="account-icon" class="fa-solid fa-user"></i>
-          <div data-open="false" style="display: none" class="account-dropdown">
+          <i
+            id="account-icon"
+            class="fa-solid fa-user"
+          ></i>
+          <div
+            data-open="false"
+            style="display: none"
+            class="account-dropdown"
+          >
             <ul>
               <li
+                class="signed-out-nav-ele"
                 onclick="window.location='./production/assets/pages/log-in.html'"
               >
                 <i class="fa-solid fa-right-to-bracket"></i>
                 <p>Login</p>
               </li>
               <li
+                class="signed-out-nav-ele"
                 onclick="window.location='./production/assets/pages/sign-up.html'"
               >
                 <i class="fa-solid fa-check"></i>
@@ -184,8 +238,14 @@
         </header>
         <aside class="filter-side-bar">
           <div class="filter-title-container">
-            <i class="fa-solid fa-filter" id="filter-icon"></i>
-            <h2 class="sub-title" id="filter-title">
+            <i
+              class="fa-solid fa-filter"
+              id="filter-icon"
+            ></i>
+            <h2
+              class="sub-title"
+              id="filter-title"
+            >
               Want something specific?
             </h2>
           </div>
@@ -202,9 +262,7 @@
             <div class="item-cards"></div>
             <div class="item-cards"></div>
           </section>
-          <section class="post-item">
-          
-          </section>
+          <section class="post-item"></section>
         </main>
         <footer class="main-footer">
           <div class="footer-social-icons">
@@ -251,8 +309,6 @@
           </div>
         </footer>
       </main>
-        
-      </div>
     </div>
   </body>
 </html>

@@ -19,7 +19,7 @@
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
 * {
-	scrollbar-width: thick;
+	scrollbar-width:auto;
 	scrollbar-color: var(--secondary-green) var(--main-bg);
 }
 

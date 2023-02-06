@@ -30,8 +30,9 @@ const checkSignIn = (db) => {
 };
 const currentPage = document.body.getAttribute('data-page');
 
+//gets current page and acts on it depending on what the current page is
+
 const checkPageSignIn = (username) => {
-  //gets current page and acts on it depending on what the current page is
   switch (currentPage) {
     case 'sign-up':
       window.location = './account.html';
@@ -43,6 +44,7 @@ const checkPageSignIn = (username) => {
       initAccountPage(username);
       break;
   }
+  initNavbar();
 };
 const checkPageSignOut = () => {
   console.log('ls', localStorage.getItem('signedIn'));

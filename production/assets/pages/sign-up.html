@@ -1,254 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta
-			http-equiv="X-UA-Compatible"
-			content="IE=edge"
-		/>
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0"
-		/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
 
-		<link
-			rel="stylesheet"
-			href="../../styles/reset.css"
-		/>
-		<link
-			rel="stylesheet"
-			href="../../styles/navbar.css"
-		/>
-		<link
-			rel="stylesheet"
-			href="../../styles/main.css"
-		/>
-		<link
-			rel="stylesheet"
-			href="../../styles/log-in.css"
-		/>
+    <link
+      rel="stylesheet"
+      href="../../styles/reset.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../styles/navbar.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../styles/main.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../styles/log-in.css"
+    />
 
-		<script
-			src="https://kit.fontawesome.com/c503d7f164.js"
-			crossorigin="anonymous"
-		></script>
+    <script
+      src="https://kit.fontawesome.com/c503d7f164.js"
+      crossorigin="anonymous"
+    ></script>
 
-		<script
-			src="../../js/main.js"
-			defer
-		></script>
-		<script 
-			src="../../js/account/init-account-database.js" 
-			defer></script>
+    <script
+      src="../../js/main.js"
+      defer
+    ></script>
+    <script
+      src="../../js/account/init-account-database.js"
+      defer
+    ></script>
 
-	<!-- needs to be put before signup.js and after init-page -->
-		<script 
-			src="../../js/account/init-sign-in.js" 
-			defer></script>
-		<script 
-			src="../../js/account/init-account-pages.js" 
-			defer></script>
-		<script 
-			src="../../js/account/sign-up.js" 
-			defer></script>
-		<title>Document</title>
-	</head>
-	<body data-page="sign-up">
-		<nav class="nav-bar">
-			<div class="nav-top-container">
-				<button
-					class="toggle-nav-button button-reset"
-					aria-controls="primary-navigation"
-					aria-expanded="false"
-				>
-					<svg
-						stroke="var(--button-color)"
-						fill="none"
-						class="hamburger"
-						viewBox="-10 -10 120 120"
-						width="60"
-					>
-						<path
-							class="line"
-							stroke-width="10"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							d="m 20 40 h 60 a 1 1 0 0 1 0 20 h -60 a 1 1 0 0 1 0 -40 h 30 v 70"
-						></path>
-					</svg>
-				</button>
-			</div>
-			<ul class="nav-list">
-				<li>
-					<a href="../../../index.html">
-						<img
-							src="../svg/NookBay.svg"
-							alt="Nook Bay"
-							aria-hidden="true"
-							class="main-logo"
-						/>
-					</a>
-				</li>
-				<li>
-					<i class="fa-solid fa-bag-shopping"></i>
-					<p>Pocket</p>
-				</li>
-				<li>
-					<i class="fa-solid fa-list"></i>
-					<p>Requests</p>
-				</li>
-				<li>
-					<i class="fa-solid fa-plus"></i>
-					<p>Create</p>
-				</li>
-				<li
-					onclick="window.location = './log-in.html'"
-					class="mobile-dropdown-content"
-				>
-					<i class="fa-solid fa-right-to-bracket"></i>
-					<p>Login</p>
-				</li>
-				<li
-					onclick="window.location = './sign-up.html'"
-					class="mobile-dropdown-content"
-				>
-					<i class="fa-solid fa-check"></i>
-					<p>Sign Up</p>
-				</li>
-				<li class="toggle-light-mode mobile-dropdown-content">
-					<i class="fa-solid fa-sun"></i>
-					<p>Dark Mode</p>
-				</li>
-				<li class="account-container">
-					<i
-						id="account-icon"
-						class="fa-solid fa-user"
-					></i>
-					<div
-						data-open="false"
-						style="display: none"
-						class="account-dropdown"
-					>
-						<ul>
-							<li onclick="window.location = './log-in.html'">
-								<i class="fa-solid fa-right-to-bracket"></i>
-								<p>Login</p>
-							</li>
-							<li onclick="window.location = './sign-up.html'">
-								<i class="fa-solid fa-check"></i>
-								<p>Sign Up</p>
-							</li>
-							<li class="toggle-light-mode">
-								<i class="fa-solid fa-sun"></i>
-								<p>Dark Mode</p>
-							</li>
-						</ul>
-					</div>
-				</li>
-			</ul>
-		</nav>
-		<div class="container">
-			<div class="login-nav-spacer"></div>
-			<main class="login-content">
-				<img
-					data-dark="true"
-					class="logo-dark-switch"
-					src="../svg/NookBay.svg"
-					alt="Nookbay"
-					loading="lazy"
-					id="sign-in-logo"
-				/>
+    <!-- needs to be put before signup.js and after init-page -->
+    <script
+      src="../../js/account/init-sign-in.js"
+      defer
+    ></script>
+    <script
+      src="../../js/account/init-account-pages.js"
+      defer
+    ></script>
+    <script
+      src="../../js/account/sign-up.js"
+      defer
+    ></script>
+    <title>Document</title>
+  </head>
+  <body data-page="sign-up">
+    <nav class="nav-bar">
+      <div class="nav-top-container">
+        <button
+          class="toggle-nav-button button-reset"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
+          <svg
+            stroke="var(--button-color)"
+            fill="none"
+            class="hamburger"
+            viewBox="-10 -10 120 120"
+            width="60"
+          >
+            <path
+              class="line"
+              stroke-width="10"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m 20 40 h 60 a 1 1 0 0 1 0 20 h -60 a 1 1 0 0 1 0 -40 h 30 v 70"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <ul class="nav-list">
+        <li>
+          <a href="../../../index.html">
+            <img
+              src="../svg/NookBay.svg"
+              alt="Nook Bay"
+              aria-hidden="true"
+              class="main-logo"
+            />
+          </a>
+        </li>
+        <li>
+          <i class="fa-solid fa-bag-shopping"></i>
+          <p>Pocket</p>
+        </li>
+        <li>
+          <i class="fa-solid fa-list"></i>
+          <p>Requests</p>
+        </li>
+        <li>
+          <i class="fa-solid fa-plus"></i>
+          <p>Create</p>
+        </li>
+        <li
+          onclick="window.location = './log-in.html'"
+          class="mobile-dropdown-content"
+        >
+          <i class="fa-solid fa-right-to-bracket"></i>
+          <p>Login</p>
+        </li>
+        <li
+          onclick="window.location = './sign-up.html'"
+          class="mobile-dropdown-content"
+        >
+          <i class="fa-solid fa-check"></i>
+          <p>Sign Up</p>
+        </li>
+        <li class="toggle-light-mode mobile-dropdown-content">
+          <i class="fa-solid fa-sun"></i>
+          <p>Dark Mode</p>
+        </li>
+        <li class="account-container">
+          <i
+            id="account-icon"
+            class="fa-solid fa-user"
+          ></i>
+          <div
+            data-open="false"
+            style="display: none"
+            class="account-dropdown"
+          >
+            <ul>
+              <li
+                class="signed-out-nav-ele"
+                onclick="window.location = './log-in.html'"
+              >
+                <i class="fa-solid fa-right-to-bracket"></i>
+                <p>Login</p>
+              </li>
+              <li
+                class="signed-out-nav-ele"
+                onclick="window.location = './sign-up.html'"
+              >
+                <i class="fa-solid fa-check"></i>
+                <p>Sign Up</p>
+              </li>
+              <li class="toggle-light-mode">
+                <i class="fa-solid fa-sun"></i>
+                <p>Dark Mode</p>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <div class="container">
+      <div class="login-nav-spacer"></div>
+      <main class="login-content">
+        <img
+          data-dark="true"
+          class="logo-dark-switch"
+          src="../svg/NookBay.svg"
+          alt="Nookbay"
+          loading="lazy"
+          id="sign-in-logo"
+        />
 
-				<div class="auth-container">
-					<section class="login-container">
-						<h2><span class="text-blue"> Sign</span> Up</h2>
-						<div class="auth-input-container">
-							<label
-								for="username-signup"
-								class="minor-text"
-							>
-								Username
-							</label>
-							<input
-								type="text"
-								name="username-input"
-								id="username-signup"
-								class="auth-input"
-							/>
-						</div>
-						<div class="auth-input-container">
-							<label
-								for="password-signup"
-								class="minor-text"
-							>
-								Password
-							</label>
-							<input
-								type="text"
-								name="password-input"
-								id="password-signup"
-								class="auth-input"
-							/>
-						</div>
-						<button id="signup-submit-button">Continue</button>
-					</section>
-					<div class="sign-in-hook-container">
-						<h3 class="minor-text text-line-center">
-							<p>Already Settled?</p>
-						</h3>
-						<a href="./log-in.html">
-							<button class="main-button-green">Sign In</button>
-						</a>
-					</div>
-					
-				</div>
-			</main>
-			<p>For Debugging:</p>
-			<button class="main-button-green clear-data">Clear Data</button>
-			<footer class="main-footer">
-				<div class="footer-social-icons">
-					<i
-						class="footer-icon fa-brands fa-facebook"
-						title="facebook"
-					></i>
-					<i
-						class="footer-icon fa-brands fa-twitter"
-						title="twitter"
-					></i>
-					<i
-						class="footer-icon fa-brands fa-youtube"
-						title="youtube"
-					></i>
-					<i
-						class="footer-icon fa-brands fa-patreon"
-						title="patreon"
-					></i>
-					<i
-						class="footer-icon fa-brands fa-instagram"
-						title="instagram"
-					></i>
-				</div>
-				<div class="footer-links-container">
-					<div class="footer-links">
-						<a href="#"><p>Pocket</p></a>
-						<a href="#"><p>Requests</p></a>
-						<a href="#"><p>Create</p></a>
-						<a href="#"><p>Login</p></a>
-						<a href="#"><p>Sign In</p></a>
-					</div>
-					<div class="footer-links">
-						<a href="#"><p>Settings</p></a>
-						<a href="#"><p>Moderation</p></a>
-						<a href="#"><p>Become a mod</p></a>
-						<a href="#"><p>Chat guidelines</p></a>
-						<a href="#"><p>How to post</p></a>
-					</div>
-					<div class="footer-links">
-						<a href="#"><p>Rules</p></a>
-						<a href="#"><p>Updates</p></a>
-					</div>
-				</div>
-			</footer>
-		</div>
-	</body>
+        <div class="auth-container">
+          <section class="login-container">
+            <h2><span class="text-blue"> Sign</span> Up</h2>
+            <div class="auth-input-container">
+              <label
+                for="username-signup"
+                class="minor-text"
+              >
+                Username
+              </label>
+              <input
+                type="text"
+                name="username-input"
+                id="username-signup"
+                class="auth-input"
+              />
+            </div>
+            <div class="auth-input-container">
+              <label
+                for="password-signup"
+                class="minor-text"
+              >
+                Password
+              </label>
+              <input
+                type="text"
+                name="password-input"
+                id="password-signup"
+                class="auth-input"
+              />
+            </div>
+            <button id="signup-submit-button">Continue</button>
+          </section>
+          <div class="sign-in-hook-container">
+            <h3 class="minor-text text-line-center">
+              <p>Already Settled?</p>
+            </h3>
+            <a href="./log-in.html">
+              <button class="main-button-green">Sign In</button>
+            </a>
+          </div>
+        </div>
+      </main>
+      <p>For Debugging:</p>
+      <button class="main-button-green clear-data">Clear Data</button>
+      <footer class="main-footer">
+        <div class="footer-social-icons">
+          <i
+            class="footer-icon fa-brands fa-facebook"
+            title="facebook"
+          ></i>
+          <i
+            class="footer-icon fa-brands fa-twitter"
+            title="twitter"
+          ></i>
+          <i
+            class="footer-icon fa-brands fa-youtube"
+            title="youtube"
+          ></i>
+          <i
+            class="footer-icon fa-brands fa-patreon"
+            title="patreon"
+          ></i>
+          <i
+            class="footer-icon fa-brands fa-instagram"
+            title="instagram"
+          ></i>
+        </div>
+        <div class="footer-links-container">
+          <div class="footer-links">
+            <a href="#"><p>Pocket</p></a>
+            <a href="#"><p>Requests</p></a>
+            <a href="#"><p>Create</p></a>
+            <a href="#"><p>Login</p></a>
+            <a href="#"><p>Sign In</p></a>
+          </div>
+          <div class="footer-links">
+            <a href="#"><p>Settings</p></a>
+            <a href="#"><p>Moderation</p></a>
+            <a href="#"><p>Become a mod</p></a>
+            <a href="#"><p>Chat guidelines</p></a>
+            <a href="#"><p>How to post</p></a>
+          </div>
+          <div class="footer-links">
+            <a href="#"><p>Rules</p></a>
+            <a href="#"><p>Updates</p></a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>
