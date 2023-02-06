@@ -1,15 +1,52 @@
-//third script in the chain
-//should be attatched to all scripts regarding account info,
-//should be put before sign-up.js
-//shoudl be put after the page init sign up script
+//sets global variables for account information if the user is signed in
 
-//takes in the database and the current person signed ins username
-//finds out what page you are on and calls the init script from that page
-const initSignIn = (username, db) => {
-  //gets what page your on through data attribute on body
-  let currentPage = document.body.getAttribute("data-page");
-  if (currentPage === "sign-up") {
-    initAccountSignupPage();
+//method is called whenever database is got
+//sets local storage to whoever is signed in
+//intentionally vague to be more scalable;
+const checkSignIn = (db) => {
+  const store = db.transaction('accounts', 'readwrite').objectStore('accounts');
+
+  const passwordIndex = store.index('password');
+
+  let passwords = passwordIndex.getAll();
+
+  passwords.onsuccess = () => {
+    let accounts = passwords.result;
+
+    accounts.forEach(function (account) {
+      if (account.signedIn == true) {
+        //make value null if no one is signed in
+        window.localStorage.setItem('signedIn', `${account.username}`);
+        console.log(window.localStorage.getItem('signedIn'));
+        checkPageSignIn(account.username);
+      }
+    });
+    let signedInLS = localStorage.getItem('signedIn');
+    if (signedInLS == 'null') {
+      console.log('running');
+      checkPageSignOut();
+    }
+  };
+};
+const currentPage = document.body.getAttribute('data-page');
+
+const checkPageSignIn = (username) => {
+  //gets current page and acts on it depending on what the current page is
+  switch (currentPage) {
+    case 'sign-up':
+      window.location = './account.html';
+      break;
+    case 'log-in':
+      window.location = './account.html';
+      break;
+    case 'account':
+      initAccountPage(username);
+      break;
   }
-  console.log(currentPage, username);
+};
+const checkPageSignOut = () => {
+  console.log('ls', localStorage.getItem('signedIn'));
+  if (currentPage == 'account') {
+    window.location = './log-in.html';
+  }
 };
