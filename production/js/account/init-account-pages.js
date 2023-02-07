@@ -42,4 +42,28 @@ function initAccountPage(username) {
   const userGreetingEle = document.querySelector('.user-greeting');
   let usernameMarkdown = `<h1> Hi, ${username}</h1>`;
   userGreetingEle.insertAdjacentHTML('beforeend', usernameMarkdown);
+
+  const store = db.transaction('accounts', 'readwrite').objectStore('accounts');
+  const passwordsIndex = store.index('password');
+  const passwords = passwordsIndex.getAll();
+  passwords.onsuccess = () => {
+    const passwordList = passwords.result;
+    const signedIn = localStorage.getItem('signedIn');
+    const currentAccount = passwordList.find(
+      (value) => value.username === signedIn
+    );
+    // initAccountProfileInfo(currentAccount);
+  };
 }
+
+// function initAccountProfileInfo(currentAccount) {
+//   const profileImages = {
+//     profilePictures: document.querySelectorAll('.account-profile-pic'),
+//     bannerImage: document.querySelector('.account-banner-image'),
+//   };
+//   if (currentAccount.bannerImage !== '') {
+//     console.log(profileImages.bannerImage);
+//     profileImages.bannerImage.src = currentAccount.bannerImage;
+//     console.log(profileImages.bannerImage.src);
+//   }
+// }

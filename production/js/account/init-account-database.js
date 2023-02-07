@@ -21,12 +21,23 @@ request.onupgradeneeded = () => {
   const store = db.createObjectStore('accounts', { keyPath: 'username' });
   store.createIndex('password', ['password'], { unique: false });
   store.createIndex('posts', ['posts'], { unique: false });
+  store.createIndex('profileData', 'profile-data', { unique: false });
+  store.createIndex('profileImage', 'profile-image', { unique: false });
+  store.createIndex('bannerImage', 'bannerImage', { unique: false });
   store.createIndex('signedIn', ['signedIn'], { unique: false });
 };
 request.onsuccess = () => {
   db = request.result;
   checkSignIn(db);
 };
+
+//adding data
+function addAccountData(data) {
+  let request = db
+    .transaction(['accounts'], 'readwrite')
+    .objectStore('accounts')
+    .add(data);
+}
 //clearing data
 let clearDatabutton = document.querySelector('.clear-data');
 if (clearDatabutton != null) clearDatabutton.onclick = () => clearData();

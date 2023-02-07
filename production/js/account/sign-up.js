@@ -37,6 +37,10 @@ const addAccount = (account) => {
   store.put({
     username: `${account.username}`,
     password: `${account.password}`,
+    posts: [],
+    profileData: '',
+    profileImage: '',
+    bannerImage: '',
     signedIn: true,
   });
 };

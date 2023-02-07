@@ -15,11 +15,12 @@ let objectPosX;
 let objectPosY;
 let finalObjectPosY = 0;
 let finalObjectPosX = 0;
+let profilePicScale = 1;
 
 let modalImage;
 
-let imageHeightRelCrop;
-let imageWidthRelCrop;
+let imageHeightRelCrop = 1;
+let imageWidthRelCrop = 1;
 
 let imageScaleInput;
 
@@ -63,8 +64,6 @@ function setObjectPos() {
     Math.round((objectPosX / accountIconCropper.offsetWidth) * 100) / 100;
   finalObjectPosY =
     Math.round((objectPosY / accountIconCropper.offsetHeight) * 100) / 100;
-
-  console.log(`X:${finalObjectPosX} Y: ${finalObjectPosY}`);
 }
 
 let profileDrag = false;
@@ -105,13 +104,16 @@ let closeModalButton;
 const modalContainer = document.querySelector('.modal');
 let accountIconCropper;
 
+//TODO: Clean this code up
+let finObjectPosX = 0;
+let finObjectPosY = 0;
+
 function setAccountImgPos() {
   const accountImages = document.querySelectorAll('.account-profile-pic');
-  console.log(accountImages);
   accountImages.forEach(function (profilePic) {
-    let finObjectPosX =
+    finObjectPosX =
       Math.round(profilePic.offsetWidth * finalObjectPosX * 100) / 100;
-    let finObjectPosY =
+    finObjectPosY =
       Math.round(profilePic.offsetHeight * finalObjectPosY * 100) / 100;
 
     imageWidthRelCrop =
@@ -123,8 +125,7 @@ function setAccountImgPos() {
         (modalImage.offsetHeight / accountIconCropper.offsetHeight) * 100
       ) / 100;
 
-    console.log(`Width:${imageWidthRelCrop} Height: ${imageHeightRelCrop}`);
-    console.log(`X:${finObjectPosX} Y: ${finObjectPosY}`);
+    profilePicScale = imageScaleInput.value;
     profilePic.style.objectPosition = `${finObjectPosX}px ${finObjectPosY}px`;
 
     root.style.setProperty('--image-rel-crop-height', `${imageHeightRelCrop}`);
@@ -143,6 +144,7 @@ function updateScale() {
 
 function closeModal() {
   setAccountImgPos();
+  getAccountInfo();
 
   modalContainer.style.display = 'none';
   while (modalContainer.firstChild) {
