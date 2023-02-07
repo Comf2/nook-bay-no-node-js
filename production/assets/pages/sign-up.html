@@ -173,18 +173,20 @@
           <section class="login-container">
             <h2><span class="text-blue"> Sign</span> Up</h2>
             <div class="auth-input-container">
-              <label
-                for="username-signup"
-                class="minor-text"
-              >
-                Username
-              </label>
-              <input
-                type="text"
-                name="username-input"
-                id="username-signup"
-                class="auth-input"
-              />
+              <form onsubmit="submitAccount(event)">
+                <label
+                  for="username-signup"
+                  class="minor-text"
+                >
+                  Username
+                </label>
+                <input
+                  type="text"
+                  required
+                  name="username-input"
+                  id="username-signup"
+                  class="auth-input"
+                />
             </div>
             <div class="auth-input-container">
               <label
@@ -194,13 +196,17 @@
                 Password
               </label>
               <input
-                type="password"
+                type="text"
+                required
                 name="password-input"
                 id="password-signup"
                 class="auth-input"
+                title="Password hsve between 8-25 characters, with a capital and a space"
+                pattern="^(?=.*[A-Z])(?=.*\d)[a-zA-Z.!_?\d]{8,25}$"
               />
             </div>
-            <button id="signup-submit-button">Continue</button>
+            <button  type="submit" id="signup-submit-button">Continue</button>
+          </form>
           </section>
           <div class="sign-in-hook-container">
             <h3 class="minor-text text-line-center">

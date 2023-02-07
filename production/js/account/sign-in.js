@@ -3,7 +3,6 @@ const signInInputs = {
   password: document.querySelector('#password-signin'),
   submit: document.querySelector('#signin-submit-button'),
 };
-signInInputs.submit.onclick = () => signIn();
 
 function signIn() {
   //gets all accounts in database

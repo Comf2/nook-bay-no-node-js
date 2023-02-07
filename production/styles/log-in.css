@@ -30,6 +30,9 @@
     display: flex;
     flex-direction: column;
 }
+.auth-input-container form {
+    border-radius: inherit;
+}
 .auth-input {
     background-color: transparent;
     border: 1px solid var(--accent-grey-opacity);

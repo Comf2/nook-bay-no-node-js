@@ -1,5 +1,5 @@
 //"Psuedo Sign In"
-
+//TODO: CLean this code up
 const account = {
   signupInputs: {
     username: document.querySelector('#username-signup'),
@@ -18,8 +18,8 @@ const accountInfo = {
   password: '',
 };
 
-account.signupInputs.submit.onclick = () => submitAccount();
-const submitAccount = () => {
+const submitAccount = (event) => {
+  event.preventDefault();
   accountInfo.username = account.signupInputs.username.value;
   accountInfo.password = account.signupInputs.password.value;
 

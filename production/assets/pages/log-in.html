@@ -173,39 +173,46 @@
           <section class="login-container">
             <h2><span class="text-blue"> Log </span> In</h2>
             <div class="auth-input-container">
-              <label
-                for="username-input"
-                class="minor-text"
+              <form >
+                <label
+                  for="username-input"
+                  class="minor-text"
+                >
+                  Username
+                </label>
+                <input
+                  type="text"
+                  required
+                  name="username-input"
+                  id="username-signin"
+                  class="auth-input"
+                />
+              </div>
+              <div class="auth-input-container">
+                <label
+                  for="password-input"
+                  class="minor-text"
+                >
+                  Password
+                </label>
+                <input
+                  type="password"
+                  required
+                  name="password-input"
+                  id="password-signin"
+                  class="auth-input"
+                />
+              </div>
+              <button
+                type="submit"
+                onclick="signIn()"
+                id="signin-submit-button"
+                class="main-button-green"
               >
-                Username
-              </label>
-              <input
-                type="text"
-                name="username-input"
-                id="username-signin"
-                class="auth-input"
-              />
-            </div>
-            <div class="auth-input-container">
-              <label
-                for="password-input"
-                class="minor-text"
-              >
-                Password
-              </label>
-              <input
-                type="text"
-                name="password-input"
-                id="password-signin"
-                class="auth-input"
-              />
-            </div>
-            <button
-              id="signin-submit-button"
-              class="main-button-green"
-            >
-              Continue
-            </button>
+                Continue
+              </button>
+            </form>
+
           </section>
           <h3 class="minor-text text-line-center">
             <p>Haven't moved in yet?</p>
