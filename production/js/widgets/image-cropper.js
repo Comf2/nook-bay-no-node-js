@@ -27,6 +27,12 @@ let imageScaleInput;
 const profilePic = document.querySelector('.account-profile-pic');
 
 const profilePicInput = document.querySelector('#account-icon-input');
+const editProfilePicButton = document.querySelector('#edit-crop-settings');
+
+if (editProfilePicButton != null)
+  editProfilePicButton.onclick = () => {
+    initModel(profilePic);
+  };
 
 profilePicInput.addEventListener('change', (e) => {
   var tgt = e.target,

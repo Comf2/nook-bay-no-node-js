@@ -44,7 +44,7 @@ const checkPageSignIn = (username) => {
       initAccountPage(username);
       break;
   }
-  initNavbar();
+  initNavbar(currentPage);
 };
 const checkPageSignOut = () => {
   console.log('ls', localStorage.getItem('signedIn'));

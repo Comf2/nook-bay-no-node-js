@@ -26,10 +26,29 @@
 			rel="stylesheet"
 			href="../../styles/item.css"
 		/>
+		
 		<script
-			src="../../js/main.js"
-			defer
-		></script>
+		src="../../js/main.js"
+		defer
+	  ></script>
+	  <script
+		src="../../js/account/init-account-database.js"
+		defer
+	  ></script>
+  
+	  <!-- needs to be put before signup.js and after init-page -->
+	  <script
+		src="../../js/account/init-sign-in.js"
+		defer
+	  ></script>
+	  <script
+		src="../../js/account/init-account-pages.js"
+		defer
+	  ></script>
+	  <script
+		src="../../js/account/sign-out.js"
+		defer
+	  ></script>
 		<script 
 		src="../../js/items/init-item-page.js" 
 		defer>

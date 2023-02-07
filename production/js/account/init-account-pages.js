@@ -2,14 +2,34 @@
 //changes page content based on if your signed in
 
 //called on every page
-function initNavbar() {
+function initNavbar(currentPage) {
   const signedOutNavEle = document.querySelectorAll('.signed-out-nav-ele');
-  const dropdownMarkdown = `
+  let dropdownMarkdown = '';
+  if (currentPage == 'index') {
+    dropdownMarkdown = `
     <li onclick="window.location = './production/assets/pages/account.html'">
       <i class="fa-solid fa-user"></i>
       <p>Account</p>
     </li>
+    <li onclick="signOut()">
+      <i class="fa-solid fa-user"></i>
+      <p>Sign Out</p>
+    </li>
   `;
+  }
+  //changes source of the links
+  else {
+    dropdownMarkdown = `
+    <li onclick="window.location = './account.html'">
+      <i class="fa-solid fa-user"></i>
+      <p>Account</p>
+    </li>
+    <li onclick="signOut()">
+      <i class="fa-solid fa-user"></i>
+      <p>Sign Out</p>
+    </li>
+  `;
+  }
   signedOutNavEle.forEach((ele) => {
     ele.remove();
   });

@@ -13,15 +13,52 @@
     gap:5vmin;
     align-items: center;
 }
+.banner-image-container{
+	width: 100%;
+	min-height: 35vh;
+	max-height: 50vh;
+	overflow: hidden;
+	position: absolute;
+	cursor: pointer;
+	isolation: isolate;
+}
+.banner-image-container:hover::after{
+	font-size: 2em;
+	content: '';
+	position: absolute;
+	inset: 0;
+	background-color: rgba(32, 30, 30, 0.247);
+}
+#banner-edit-icon{
+	display: none;
+}
+.banner-image-container:hover #banner-edit-icon{
+	display: block;
+	color: var(--main-text);
+	padding: 1vmin;
+	background-color: var(--main-bg);
+	aspect-ratio: 1/1;
+	border-radius: 50vw;
+	font-size: 1.3em;
+	width: fit-content;
+	margin: 5vmin 3vmin;
+	cursor: pointer;
+}
 .account-banner-image{
-    position: absolute;
+	position: absolute;
     width: 100%;
+	height: 100%;
     left: 0;
     z-index: -1;
-    max-height: 50vh;
     object-fit: cover;
     object-position: center;
-    margin: 0 auto;
+}
+#banner-image-input{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	opacity: 0;
+	z-index: 999;
 }
 .toggle-page-container {
 	background-color: var(--main-bg);
@@ -36,6 +73,9 @@
 	isolation: isolate;
     box-shadow: var(--main-drop-shadow);
     margin-top: 10vmin;
+}
+.toggle-page-container h2 {
+	pointer-events: none;
 }
 
 .selected-page-background {
@@ -79,6 +119,7 @@
 	border-radius: 50vw;
 	display: grid;
 	place-items: center;
+	cursor: pointer;
 }
 
 .account-icon img {
@@ -88,8 +129,28 @@
 	height: calc(var(--account-icon-height) * var(--image-rel-crop-height));
 	width: calc((var(--account-icon-width) * var(--image-rel-crop-width)));
 	scale: var(--profile-pic-scale);
+	cursor: pointer;
 }
-
+#account-icon-input {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	opacity: 0;
+	cursor: pointer;
+}
+#edit-crop-settings{
+	font-size: 1.2em;
+	color:var(--main-text);
+	margin-right: auto;
+	text-decoration: underline;
+	cursor: pointer;
+	transition: all 0.3s var(--main-transition-timing);
+}
+#edit-crop-settings:hover {
+	color: var(--secondary-text);
+	transform: translateY(-3px);
+}
 .pos {
 	font-size: 2rem;
 	color: white;
@@ -140,13 +201,7 @@
 	border: none;
 }
 
-#account-icon-input {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	left: 0;
-	opacity: 0;
-}
+
 #profile-pic-scale {
 	position: absolute;
 	top: 10vh;
@@ -165,11 +220,13 @@
         width: 20vw;
     }
     .profile-info-container{
-        margin-top: 13vh;
         flex-direction: row;
     }
     .profile-info-container h1{
         font-size: 3rem;
         margin-top: 5vmin;
     }
+	.banner-image-container:hover #banner-edit-icon{ 
+		margin: 2vmin;
+	}
 }

@@ -168,12 +168,24 @@
       <div class="nav-spacer"></div>
       <div class="modal"></div>
       <header class="account-top-content">
-        <img
-          src="../images/banner-image-account.jpg"
-          class="account-banner-image"
-          alt="Banner Image"
-          aria-hidden="true"
-        />
+        <div class="banner-image-container">
+          <img
+            src="../images/banner-image-account.jpg"
+            class="account-banner-image"
+            alt="Banner Image"
+            aria-hidden="true"
+          />
+          <input
+            type="file"
+            id="banner-image-input"
+            name="banner-image-input"
+            accept="image/*"
+          />
+          <i
+            id="banner-edit-icon"
+            class="fa-solid fa-pencil"
+          ></i>
+        </div>
         <div class="toggle-page-container">
           <div class="selected-page-background"></div>
           <div class="profile-container">
@@ -188,7 +200,8 @@
             <img
               class="account-profile-pic"
               src="../svg/account-icon.svg"
-              alt=""
+              alt="profile pic"
+              aria-hidden="true"
             />
             <label
               for="account-icon-input"
@@ -203,6 +216,7 @@
           </div>
           <h1 class="user-greeting"></h1>
         </div>
+        <p id="edit-crop-settings">Edit Image...</p>
       </header>
       <div class="account-main-aside-container">
         <aside class="settings-tree-container">
