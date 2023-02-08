@@ -60,6 +60,7 @@
   <body data-page="log-in">
     <nav class="nav-bar">
       <div class="nav-top-container">
+        <!-- hamburger icon -->
         <button
           class="toggle-nav-button button-reset"
           aria-controls="primary-navigation"
@@ -81,10 +82,25 @@
             ></path>
           </svg>
         </button>
+        <div class="mobile-search-container">
+          <div class="search-container">
+            <i
+              class="fa-solid fa-magnifying-glass"
+              id="search-icon"
+            ></i>
+            <input
+              type="search"
+              name="search-item"
+              id="search-item"
+              class="main-search"
+              placeholder="Item..."
+            />
+          </div>
+        </div>
       </div>
       <ul class="nav-list">
         <li>
-          <a href="../../../index.html">
+          <a href="./index.html">
             <img
               src="../svg/NookBay.svg"
               alt="Nook Bay"
@@ -105,15 +121,30 @@
           <i class="fa-solid fa-plus"></i>
           <p>Create</p>
         </li>
+        <li class="desktop-search-container">
+          <div class="search-container">
+            <i
+              class="fa-solid fa-magnifying-glass"
+              id="search-icon"
+            ></i>
+            <input
+              type="search"
+              name="search-item"
+              id="search-item"
+              class="main-search"
+              placeholder="Item..."
+            />
+          </div>
+        </li>
         <li
-          onclick="window.location = './log-in.html'"
+          onclick="window.location='./log-in.html'"
           class="mobile-dropdown-content"
         >
           <i class="fa-solid fa-right-to-bracket"></i>
           <p>Login</p>
         </li>
         <li
-          onclick="window.location = './sign-up.html'"
+          onclick="window.location='./sign-up.html'"
           class="mobile-dropdown-content"
         >
           <i class="fa-solid fa-check"></i>
@@ -136,14 +167,14 @@
             <ul>
               <li
                 class="signed-out-nav-ele"
-                onclick="window.location = './log-in.html'"
+                onclick="window.location='./log-in.html'"
               >
                 <i class="fa-solid fa-right-to-bracket"></i>
                 <p>Login</p>
               </li>
               <li
                 class="signed-out-nav-ele"
-                onclick="window.location = './sign-up.html'"
+                onclick="window.location='./sign-up.html'"
               >
                 <i class="fa-solid fa-check"></i>
                 <p>Sign Up</p>
