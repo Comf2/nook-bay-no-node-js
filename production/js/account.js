@@ -10,8 +10,8 @@ togglePageButton.onclick = () => togglePage();
 
 //adding custom banner image
 const bannerImageInput = document.querySelector('#banner-image-input');
-const bannerImage = document.querySelector('.account-banner-image');
 bannerImageInput.addEventListener('change', function (e) {
+  const bannerImage = document.querySelector('.account-banner-image');
   var tgt = e.target,
     files = tgt.files;
 
@@ -20,6 +20,7 @@ bannerImageInput.addEventListener('change', function (e) {
     var fr = new FileReader();
     fr.onload = function () {
       bannerImage.src = fr.result;
+      getAccountInfo();
     };
 
     fr.readAsDataURL(files[0]);
@@ -33,13 +34,14 @@ bannerImageInput.addEventListener('change', function (e) {
 
 //gets all information that will be pushed to database,
 function getAccountInfo() {
+  let profilePicScale = root.style.getPropertyValue('--profile-pic-scale');
   const profilePic = {
     height: imageHeightRelCrop,
     width: imageWidthRelCrop,
     scale: profilePicScale,
     pos: {
-      x: finObjectPosX,
-      y: finObjectPosY,
+      x: finalObjectPosX,
+      y: finalObjectPosY,
     },
   };
   const profilePicture = document.querySelector('.account-profile-pic').src;
@@ -56,7 +58,6 @@ function pushAccountInfoToDb(profilePic, bannerImage, profilePicture) {
   const store = db.transaction('accounts', 'readwrite').objectStore('accounts');
   const passwordsIndex = store.index('password');
   const passwords = passwordsIndex.getAll();
-  console.log(profilePic);
   passwords.onsuccess = () => {
     const passwordList = passwords.result;
     const signedIn = localStorage.getItem('signedIn');

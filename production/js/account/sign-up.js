@@ -43,4 +43,5 @@ const addAccount = (account) => {
     bannerImage: '',
     signedIn: true,
   });
+  window.location.reload();
 };

@@ -139,11 +139,18 @@
 	opacity: 0;
 	cursor: pointer;
 }
+.profile-pic-support-text {
+	margin-right: auto;
+	display: flex;
+	gap: 2vmin;
+	align-items: center;
+	
+}
 #edit-crop-settings{
+	text-decoration: underline;
+
 	font-size: 1.2em;
 	color:var(--main-text);
-	margin-right: auto;
-	text-decoration: underline;
 	cursor: pointer;
 	transition: all 0.3s var(--main-transition-timing);
 }

@@ -25,7 +25,6 @@ let imageWidthRelCrop = 1;
 let imageScaleInput;
 
 // changing account icon
-const profilePic = document.querySelector('.account-profile-pic');
 
 const profilePicInput = document.querySelector('#account-icon-input');
 const editProfilePicButton = document.querySelector('#edit-crop-settings');
@@ -36,6 +35,7 @@ if (editProfilePicButton != null)
   };
 
 profilePicInput.addEventListener('change', (e) => {
+  const profilePic = document.querySelector('.account-profile-pic');
   var tgt = e.target,
     files = tgt.files;
 
@@ -201,3 +201,4 @@ function initModel(pic) {
   root.style.setProperty('--image-rel-crop-width', `1`);
   root.style.setProperty('--profile-pic-scale', `1`);
 }
+//TODO: try to do client side db if time
