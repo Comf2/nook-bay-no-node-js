@@ -38,7 +38,7 @@ const addAccount = (account) => {
     username: `${account.username}`,
     password: `${account.password}`,
     posts: [],
-    profileData: 'null',
+    profileData: '',
     profileImage: '',
     bannerImage: '',
     signedIn: true,
