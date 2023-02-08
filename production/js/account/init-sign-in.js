@@ -23,7 +23,6 @@ const checkSignIn = (db) => {
     });
     let signedInLS = localStorage.getItem('signedIn');
     if (signedInLS == 'null') {
-      console.log('running');
       checkPageSignOut();
     }
   };

@@ -298,4 +298,9 @@ body {
 	width: auto;
 	height: auto;
 }
+
+.mobile-signed-in-nav-ele {
+	display: none !important;
+	opacity: 0;
+}
 }

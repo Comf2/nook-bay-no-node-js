@@ -148,16 +148,32 @@ const toggleLightMode = () => {
 };
 
 const getDarkMode = () => {
-  let isDarkMode = document.cookie;
+  const isDarkMode = document.cookie
+    .split('; ')
+    .find((row) => row.startsWith('darkmode='))
+    ?.split('=')[1];
   console.log(isDarkMode);
+
   let darkMode = isDarkMode === 'true';
   setLightMode(darkMode);
 };
 getDarkMode();
 //---**--Saving Darkmode To Cookies ---**--//
 
-//cookies can only store darkmode
+//running on load
+(function getDarkMode() {})();
 function setDarkmodeCookie() {
   let isDarkmode = localStorage.getItem('darkMode');
-  document.cookie = `${isDarkmode};`;
+  document.cookie = `darkmode=${isDarkmode};`;
+}
+
+function deleteAllCookies() {
+  const cookies = document.cookie.split(';');
+
+  for (let i = 0; i < cookies.length; i++) {
+    const cookie = cookies[i];
+    const eqPos = cookie.indexOf('=');
+    const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+    document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT';
+  }
 }

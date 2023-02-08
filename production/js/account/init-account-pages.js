@@ -4,7 +4,9 @@
 //called on every page
 function initNavbar(currentPage) {
   const signedOutNavEle = document.querySelectorAll('.signed-out-nav-ele');
+  //desktop layout
   let dropdownMarkdown = '';
+  let mobileNavDropdown = '';
   if (currentPage == 'index') {
     dropdownMarkdown = `
     <li onclick="window.location = './production/assets/pages/account.html'">
@@ -16,6 +18,16 @@ function initNavbar(currentPage) {
       <p>Sign Out</p>
     </li>
   `;
+    mobileNavDropdown = `
+  <li class="mobile-signed-in-nav-ele" onclick="window.location = './production/assets/pages/account.html'">
+    <i class="fa-solid fa-user"></i>
+    <p>Account</p>
+  </li>
+  <li class="mobile-signed-in-nav-ele" onclick="signOut()">
+    <i class="fa-solid fa-user"></i>
+    <p>Sign Out</p>
+  </li>
+`;
   }
   //changes source of the links
   else {
@@ -29,12 +41,26 @@ function initNavbar(currentPage) {
       <p>Sign Out</p>
     </li>
   `;
+    mobileNavDropdown = `
+    <li class="mobile-signed-in-nav-ele" onclick="window.location = './account.html'">
+      <i class="fa-solid fa-user"></i>
+      <p>Account</p>
+    </li>
+  <li class="mobile-signed-in-nav-ele" onclick="signOut()">
+    <i class="fa-solid fa-user"></i>
+    <p>Sign Out</p>
+  </li>  
+   `;
   }
   signedOutNavEle.forEach((ele) => {
     ele.remove();
   });
   const dropdown = document.querySelector('.account-dropdown ul');
   dropdown.insertAdjacentHTML('beforebegin', dropdownMarkdown);
+
+  //editing for mobile layout
+  const mobileNav = document.querySelector('.toggle-light-mode');
+  mobileNav.insertAdjacentHTML('beforebegin', mobileNavDropdown);
 }
 
 function initAccountPage(username) {
@@ -57,7 +83,6 @@ function initAccountPage(username) {
 }
 
 function initAccountProfileInfo(currentAccount) {
-  console.log(finalObjectPosX, finalObjectPosY);
   const profileImages = {
     profilePictures: document.querySelectorAll('.account-profile-pic'),
     bannerImage: document.querySelector('.account-banner-image'),
@@ -79,7 +104,10 @@ function initAccountProfileInfo(currentAccount) {
     bannerImageContainer.insertAdjacentHTML('afterbegin', bannerImageMarkdown);
   }
   // inits profile picture
-  if (currentAccount.profileData !== '') {
+  if (
+    currentAccount.profileData !== '' &&
+    currentAccount.profileData !== undefined
+  ) {
     let profileData = JSON.parse(currentAccount.profileData);
     root.style.setProperty('--image-rel-crop-height', `${profileData.height}`);
     root.style.setProperty('--image-rel-crop-width', `${profileData.width}`);
@@ -105,7 +133,6 @@ function initAccountProfileInfo(currentAccount) {
     currentPfp = document.querySelectorAll('.account-profile-pic');
     console.table(currentPfp);
     for (let i = 0; i < currentPfp.length; i++) {
-      console.log('running');
       let getPicPos = calculateProfilePicturePos(
         accountIcon[i],
         profileData.pos.x,
