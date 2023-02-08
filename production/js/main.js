@@ -1,7 +1,7 @@
 //TODO:
-//add searchbar to nav
-//if signed in edit the mobile nav
-//fix the modal crop styles for mobile
+//Make static cart page
+//fix profile pic bug
+//add functionality
 const housewareURL = 'https://acnhapi.com/v1a/houseware/';
 
 //-----mobile navbar toggle-----//

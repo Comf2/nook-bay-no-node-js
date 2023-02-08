@@ -29,12 +29,31 @@ let imageScaleInput;
 const profilePicInput = document.querySelector('#account-icon-input');
 const editProfilePicButton = document.querySelector('#edit-crop-settings');
 
+const profilePicToolTip = document.querySelector('#profile-pic-tool-tip');
+
 if (editProfilePicButton != null)
   editProfilePicButton.onclick = () => {
+    let profilePic = document.querySelector('.account-profile-pic');
     initModel(profilePic);
   };
+const desktopScreenSize = 1300;
 
+function toggleProfileTip() {
+  if (window.innerWidth <= desktopScreenSize) {
+    profilePicToolTip.innerHTML = 'Must be on computer to change profile pic';
+  } else {
+    profilePicToolTip.innerHTML = 'Click Profile Pic to Change It';
+  }
+}
+toggleProfileTip();
+window.addEventListener('resize', function (e) {
+  toggleProfileTip();
+});
 profilePicInput.addEventListener('change', (e) => {
+  if (window.innerWidth <= desktopScreenSize) {
+    alert('Must be on computer to change profile pic');
+    return;
+  }
   const profilePic = document.querySelector('.account-profile-pic');
   var tgt = e.target,
     files = tgt.files;

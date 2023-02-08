@@ -1,0 +1,111 @@
+
+.cart-title-container {
+    display: flex;
+    gap: 2vmin;
+    align-items: center;
+    font-size: 1.7em;
+
+}
+.cart-title-container i {
+    font-size: 1.3em;
+}
+.main-aside-cart-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+/* cart item styles  */
+.cart-item-container{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid var(--accent-grey-opacity);
+    border-top: 2px solid var(--accent-grey-opacity);
+    width: 100%;
+    padding: 1rem 20vmin;
+    text-align: center;
+}
+.cart-item-container img {
+    background-color: var(--secondary-bg);
+    border-radius: 1rem;
+}
+.cart-item-info-container h2{
+    font-size: 1.8em;
+}
+.cart-item-info-container p:nth-child(1){
+    font-size: 1.5em;
+}
+.cart-item-info-container p:nth-child(n+1){
+    font-size: 1.3em;
+}
+.cart-item-actions-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3vmin;
+}
+.cart-item-actions-container div{
+    display: flex;
+    justify-content: space-between;
+    text-decoration: underline;
+    font-size: 1.3em;
+}
+.cart-item-actions-container button{
+    margin-right: auto;
+}
+/* mobile cart bottom */
+.mobile-purchase-info-container{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    min-height: 7rem;
+    background-color: var(--secondary-bg);
+    display: flex;
+    flex-direction: column;
+    gap: 5vmin;
+    font-size: 1.1em;
+}
+.mobile-purchase-info-container div{
+    display: flex;
+    justify-content: space-between;
+    padding: 1vmin 5vmin;
+}
+.mobile-purchase-info-container p {
+    font-size: 1.3em;
+}
+.cart-item-spacer{
+    height: 8rem;
+}
+@media screen and (min-width:700px) {
+   .cart-item-container {
+    flex-direction: row;
+    padding: 3vmin 2vmin;
+   }
+   .cart-item-container img {
+    min-width: 15rem;
+    aspect-ratio: 1/1;
+   }
+   .cart-information-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 3vmin;
+    width: 100%;
+   }
+   .cart-item-info-container{
+    text-align: left;
+   }
+   .cart-item-actions-container {
+    flex-direction: row;
+    width: 100%;
+   }
+   .cart-item-actions-container button{
+    margin-left: auto;
+    margin-right: 0;
+    }
+    .cart-item-actions-container div {
+        gap: 3vmin;
+    }
+    .cart-item-spacer{
+        height: 10rem;
+    }
+}

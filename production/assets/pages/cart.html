@@ -10,14 +10,9 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-
     <link
       rel="stylesheet"
       href="../../styles/reset.css"
-    />
-    <link
-      rel="stylesheet"
-      href="../../styles/navbar.css"
     />
     <link
       rel="stylesheet"
@@ -25,12 +20,12 @@
     />
     <link
       rel="stylesheet"
-      href="../../styles/account.css"
+      href="../../styles/navbar.css"
     />
-    <script
-      src="https://kit.fontawesome.com/c503d7f164.js"
-      crossorigin="anonymous"
-    ></script>
+    <link
+      rel="stylesheet"
+      href="../../styles/cart.css"
+    />
 
     <script
       src="../../js/main.js"
@@ -54,18 +49,25 @@
       src="../../js/account/sign-out.js"
       defer
     ></script>
-
     <script
-      src="../../js/widgets/image-cropper.js"
+      src="../../js/items/init-item-page.js"
       defer
     ></script>
     <script
-      src="../../js/account.js"
+      src="../../js/widgets/scroll-effect.js"
       defer
     ></script>
-    <title>Account</title>
+    <script
+      src="../../js/item.js"
+      defer
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/c503d7f164.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
   </head>
-  <body data-page="account">
+  <body data-page="item">
     <nav class="nav-bar">
       <div class="nav-top-container">
         <!-- hamburger icon -->
@@ -198,120 +200,116 @@
     </nav>
     <div class="container">
       <div class="nav-spacer"></div>
-      <div class="modal"></div>
-      <header class="account-top-content">
-        <div class="banner-image-container">
-          <img
-            src="../images/banner-image-account.jpg"
-            class="account-banner-image"
-            alt="Banner Image"
-            aria-hidden="true"
-          />
-          <input
-            type="file"
-            id="banner-image-input"
-            name="banner-image-input"
-            accept="image/*"
-          />
-          <i
-            id="banner-edit-icon"
-            class="fa-solid fa-pencil"
-          ></i>
-        </div>
-        <div class="toggle-page-container">
-          <div class="selected-page-background"></div>
-          <div class="profile-container">
-            <h2>Profile</h2>
-          </div>
-          <div class="chats-container">
-            <h2>Chats</h2>
-          </div>
-        </div>
-        <div class="profile-info-container">
-          <div class="account-icon">
-            <img
-              class="account-profile-pic"
-              src="../svg/account-icon.svg"
-              alt="profile pic"
-              aria-hidden="true"
-            />
-            <label
-              for="account-icon-input"
-              class="account-icon-button"
-            ></label>
-            <input
-              type="file"
-              id="account-icon-input"
-              name="account-icon-input"
-              accept="image/*"
-            />
-          </div>
-          <h1 class="user-greeting"></h1>
-        </div>
-        <div class="profile-pic-support-text">
-          <p id="edit-crop-settings">Edit Image...</p>
-          <p
-            id="profile-pic-tool-tip"
-            class="text-minor"
-          >
-            Click Profile Pic to Change It
-          </p>
+      <header>
+        <div class="cart-title-container">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <h1 class="">My Pocket</h1>
         </div>
       </header>
-      <div class="account-main-aside-container">
-        <aside class="settings-tree-container">
-          <h2>Placeholder</h2>
-          <h2>Placeholder</h2>
-          <h2>Placeholder</h2>
-          <h2>Placeholder</h2>
-          <h2>Placeholder</h2>
-        </aside>
-        <main class="main-content"></main>
+      <div class="main-aside-cart-container">
+        <main>
+          <section class="cart-item-container">
+            <img
+              src="../images/arch-placeholder.png"
+              alt="Item Image"
+              aria-hidden="true"
+              class="cart-product-image"
+            />
+            <div class="cart-information-container">
+              <div class="cart-item-info-container">
+                <h2 class="text-blue">Natural Antique Bed</h2>
+                <p class="text-green">Comf1</p>
+                <p class="minor-text">Attribute: Natural</p>
+              </div>
+              <div class="cart-item-actions-container">
+                <div>
+                  <p>Remove</p>
+                  <p>Send to Storage</p>
+                </div>
+                <button class="main-button-green">Purchase</button>
+              </div>
+            </div>
+          </section>
+          <section class="cart-item-container">
+            <img
+              src="../images/arch-placeholder.png"
+              alt="Item Image"
+              aria-hidden="true"
+              class="cart-product-image"
+            />
+            <div class="cart-information-container">
+              <div class="cart-item-info-container">
+                <h2 class="text-blue">Natural Antique Bed</h2>
+                <p class="text-green">Comf1</p>
+                <p class="minor-text">Attribute: Natural</p>
+              </div>
+              <div class="cart-item-actions-container">
+                <div>
+                  <p>Remove</p>
+                  <p>Send to Storage</p>
+                </div>
+                <button class="main-button-green">Purchase</button>
+              </div>
+            </div>
+          </section>
+          <section class="cart-item-container">
+            <img
+              src="../images/arch-placeholder.png"
+              alt="Item Image"
+              aria-hidden="true"
+              class="cart-product-image"
+            />
+            <div class="cart-information-container">
+              <div class="cart-item-info-container">
+                <h2 class="text-blue">Natural Antique Bed</h2>
+                <p class="text-green">Comf1</p>
+                <p class="minor-text">Attribute: Natural</p>
+              </div>
+              <div class="cart-item-actions-container">
+                <div>
+                  <p>Remove</p>
+                  <p>Send to Storage</p>
+                </div>
+                <button class="main-button-green">Purchase</button>
+              </div>
+            </div>
+          </section>
+          <section class="cart-item-container">
+            <img
+              src="../images/arch-placeholder.png"
+              alt="Item Image"
+              aria-hidden="true"
+              class="cart-product-image"
+            />
+            <div class="cart-information-container">
+              <div class="cart-item-info-container">
+                <h2 class="text-blue">Natural Antique Bed</h2>
+                <p class="text-green">Comf1</p>
+                <p class="minor-text">Attribute: Natural</p>
+              </div>
+              <div class="cart-item-actions-container">
+                <div>
+                  <p>Remove</p>
+                  <p>Send to Storage</p>
+                </div>
+                <button class="main-button-green">Purchase</button>
+              </div>
+            </div>
+          </section>
+          <div class="cart-item-spacer"></div>
+        </main>
+        <aside></aside>
       </div>
-      <footer class="main-footer">
-        <div class="footer-social-icons">
-          <i
-            class="footer-icon fa-brands fa-facebook"
-            title="facebook"
-          ></i>
-          <i
-            class="footer-icon fa-brands fa-twitter"
-            title="twitter"
-          ></i>
-          <i
-            class="footer-icon fa-brands fa-youtube"
-            title="youtube"
-          ></i>
-          <i
-            class="footer-icon fa-brands fa-patreon"
-            title="patreon"
-          ></i>
-          <i
-            class="footer-icon fa-brands fa-instagram"
-            title="instagram"
-          ></i>
+      <div class="mobile-purchase-info-container">
+        <div>
+          <p class="minor-text">3 Items In Cart</p>
+          <p class="minor-text">Total: <span class="text-green">2500</span></p>
         </div>
-        <div class="footer-links-container">
-          <div class="footer-links">
-            <a href="#"><p>Pocket</p></a>
-            <a href="#"><p>Requests</p></a>
-            <a href="#"><p>Create</p></a>
-            <a href="#"><p>Login</p></a>
-            <a href="#"><p>Sign In</p></a>
-          </div>
-          <div class="footer-links">
-            <a href="#"><p>Settings</p></a>
-            <a href="#"><p>Moderation</p></a>
-            <a href="#"><p>Become a mod</p></a>
-            <a href="#"><p>Chat guidelines</p></a>
-            <a href="#"><p>How to post</p></a>
-          </div>
-          <div class="footer-links">
-            <a href="#"><p>Rules</p></a>
-            <a href="#"><p>Updates</p></a>
-          </div>
+        <div>
+          <button class="main-button-green">Purchase</button>
+          <button class="main-button-blue">Keep Shopping</button>
         </div>
-      </footer>
+      </div>
     </div>
   </body>
 </html>
