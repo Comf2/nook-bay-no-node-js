@@ -1,5 +1,4 @@
 //TODO:
-//add more cart display
 //fix nav
 // search and transition
 const housewareURL = 'https://acnhapi.com/v1a/houseware/';
@@ -10,7 +9,7 @@ const navBar = document.querySelector('.nav-bar');
 const navList = document.querySelector('.nav-list');
 let navOpen = false;
 
-const desktopBreakPoint = 900;
+const desktopBreakPoint = 1000;
 
 //when button is clicked toggle the nav bar
 toggleNavButton.addEventListener('click', (e) => {
@@ -56,6 +55,10 @@ window.addEventListener('resize', function (e) {
     navBar.style = '';
     navList.style = '';
   } else if (window.innerWidth <= desktopBreakPoint) {
+    navBar.style.transitionProperty = 'none';
+    setTimeout(() => {
+      navBar.style.transitionProperty = '';
+    }, 500);
     navOpen = true;
     toggleNav();
   }
