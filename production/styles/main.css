@@ -393,6 +393,27 @@ input{
 	width: 75vw;
 	margin: 0 auto;
 }
+
+@keyframes float {
+	0%{transform: translateY(0px) scale(1);}
+	50%{transform: translateY(-5px) scale(1.01);}
+	100%{transform: translateY(0px) scale(1);}
+}
+.cart-to-action-container {
+	display: none;
+    position: fixed;
+    background-color: var(--secondary-bg);
+    padding: 2rem;
+    border-radius: 1rem;
+    top: 5rem;
+    left: 5vmin;
+    animation: float 3s var(--main-transition-timing) infinite;
+}
+.cart-to-action-container a {
+    font-family: inherit;
+    font-size: 1.1em;
+    color: var(--main-text);
+}
 @media screen and (min-width:750px){
 	.item-cards{
 		width: 75vw;

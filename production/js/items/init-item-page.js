@@ -8,7 +8,7 @@ const container = document.querySelector('.container');
 const itemImageEles = document.querySelectorAll('.item-image');
 const itemNameEles = document.querySelectorAll('.item-name');
 const itemPriceEles = document.querySelectorAll('.item-price');
-
+const addToCartButton = document.querySelectorAll('.add-to-cart-button');
 //TODO:add bell icon to item page
 
 (function initPurchasePage() {
@@ -22,7 +22,7 @@ const itemPriceEles = document.querySelectorAll('.item-price');
   itemPriceEles.forEach(function (img) {
     img.innerHTML = itemPrice;
   });
+  addToCartButton.forEach((button) => {
+    button.onclick = () => addToCart(itemImage, 'name', itemName, itemPrice, 0);
+  });
 })();
-//finish static website
-//after that add authentification and dynamic data
-//have a finished product

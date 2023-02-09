@@ -1,7 +1,7 @@
 //TODO:
-//Make static cart page
-//fix profile pic bug
-//add functionality
+//add more cart display
+//fix nav
+// search and transition
 const housewareURL = 'https://acnhapi.com/v1a/houseware/';
 
 //-----mobile navbar toggle-----//

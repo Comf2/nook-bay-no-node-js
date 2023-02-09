@@ -1,5 +1,6 @@
 (function initCart() {
   let cart = localStorage.getItem('cart');
+  if (cart == '') return;
   let cartArray = JSON.parse(cart);
 
   cartArray.forEach((item) => {
@@ -43,4 +44,14 @@ function getCartItemMarkdown(item) {
   </section>
     `;
   return itemMarkdown;
+}
+
+clearCartButton = document.querySelector('.clear-cart-button');
+
+clearCartButton.onclick = () => clearCart();
+function clearCart() {
+  localStorage.setItem('cart', '');
+  console.log('running');
+
+  window.location.reload();
 }

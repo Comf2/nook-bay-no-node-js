@@ -31,6 +31,7 @@
 		src="../../js/main.js"
 		defer
 	  ></script>
+	  
 	  <script
 		src="../../js/account/init-account-database.js"
 		defer
@@ -53,6 +54,11 @@
 		src="../../js/items/init-item-page.js" 
 		defer>
 	</script>
+	<script 
+		src="../../js/widgets/add-to-cart.js" 
+  	defer></script>
+  
+
 	<script src="../../js/widgets/scroll-effect.js" defer></script>
 	<script src="../../js/item.js" defer></script>
 		<script
@@ -194,6 +200,10 @@
 		  </nav>
 		<div class="container">
 				<div class="nav-spacer"></div>
+				<div class="cart-to-action-container">
+					<h3>Your pocket has items in it!</h3>
+					<a href="./cart.html">Go To Pocket</a>
+				</div>
 				<header class="item-container">
 					<img
 						src="../images/arch-placeholder.png"
@@ -217,7 +227,7 @@
                             </div>
                             <div class="desktop-head-buy-buttons">
                                 <button class="main-button-green">Purchase</button>
-                                <button class="main-button-green">Add To Cart</button>
+                                <button class="main-button-green add-to-cart-button">Add To Cart</button>
                             </div>
                         </div>
                         
@@ -227,7 +237,7 @@
 						<h2 class="item-name">2021 Celebratory Arch</h2>
 						<button class="main-button-green">Purchase</button>
 						<h2 class="text-green item-price">500</h2>
-						<button class="main-button-green">Add To Cart</button>
+						<button class="main-button-green add-to-cart-button">Add To Cart</button>
 					</section>
                     <details class="more-item-info">
                         <summary>More Info...</summary>
