@@ -148,6 +148,7 @@ const toggleLightMode = () => {
   let isDarkMode = window.localStorage.getItem('darkMode');
   let darkMode = isDarkMode === 'false';
   setLightMode(darkMode);
+  localStorage.setItem('darkMode', darkMode);
 };
 
 const getDarkMode = () => {
@@ -164,7 +165,6 @@ getDarkMode();
 //---**--Saving Darkmode To Cookies ---**--//
 
 //running on load
-(function getDarkMode() {})();
 function setDarkmodeCookie() {
   let isDarkmode = localStorage.getItem('darkMode');
   document.cookie = `darkmode=${isDarkmode};`;

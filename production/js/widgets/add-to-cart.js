@@ -1,4 +1,12 @@
 let cart = [];
+function initCart() {
+  const lsCart = localStorage.getItem('cart');
+  if (lsCart === null) return;
+  let cartArr = JSON.parse(lsCart);
+  cart.push(...cartArr);
+  console.log(cart);
+}
+initCart();
 const addToCart = (image, name, fullName, price, id) => {
   let itemObject = {
     image: image,
@@ -15,9 +23,8 @@ const addToCart = (image, name, fullName, price, id) => {
 
 function initCartCallToAction() {
   let cart = localStorage.getItem('cart');
-  console.log(cart.length);
+  if (cart === null) return;
   if (typeof cart === 'string' && cart.length > 0) {
-    console.log(localStorage.getItem('cart'));
     let cartCallToAction = document.querySelector('.cart-to-action-container');
     cartCallToAction.style.display = 'block';
   }
